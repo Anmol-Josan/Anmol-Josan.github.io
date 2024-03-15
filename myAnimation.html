@@ -8,14 +8,14 @@
         .square{
             width: 200px;
             height: 200px;
-            background-color: lightsalmon;
+            background-color: inherit;
             margin: 200px auto;
             animation-name: square-to-circle;
             animation-duration: 2s;
-            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-timing-function: cubic-bezier(1000, 1000, 1, 1);
             animation-delay: .5s;
             animation-iteration-count: infinite;
-            animation-direction: alternate-reverse;
+            animation-direction: normal;
         }
 
         @keyframes square-to-circle {
@@ -27,22 +27,22 @@
             25%{
                 border-radius: 50% 0 50% 0;
                 background: salmon;
-                transform: rotate(45deg);
+                transform: rotate(90deg);
             }
             50%{
                 border-radius: 0 50% 0 50%;
                 background: darksalmon;
-                transform: rotate(90deg);
+                transform: rotate(180deg);
             }
             75%{
                 border-radius: 50% 0 50% 0;
                 background: salmon;
-                transform: rotate(135deg);
+                transform: rotate(270deg);
             }
             100%{
-                border-radius: 50% 0 50% 0;
+                border-radius: 0 50% 0 50%;
                 background: lightsalmon;
-                transform: rotate(180deg);
+                transform: rotate(360deg);
             }
         }
 
