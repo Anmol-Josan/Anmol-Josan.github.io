@@ -12,15 +12,15 @@
             margin: 200px auto;
             animation-name: square-to-circle;
             animation-duration: 2s;
-            animation-timing-function: linear;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
             animation-delay: .5s;
             animation-iteration-count: infinite;
-            animation-direction: alternate;
+            animation-direction: alternate-reverse;
         }
 
         @keyframes square-to-circle {
             0%{
-                border-radius: 50%;
+                border-radius: 0 50% 0 50%;
                 background: lightsalmon;
                 transform: rotate(0deg);
             }
