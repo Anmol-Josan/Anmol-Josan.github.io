@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color:  rgb(25, 25, 25);
+        }
+        .square{
+            width: 200px;
+            height: 200px;
+            background-color: lightsalmon;
+            margin: 200px auto;
+            animation-name: square-to-circle;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: .5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes square-to-circle {
+            0%{
+                border-radius: 50%;
+                background: lightsalmon;
+                transform: rotate(0deg);
+            }
+            25%{
+                border-radius: 50% 0 50% 0;
+                background: salmon;
+                transform: rotate(45deg);
+            }
+            50%{
+                border-radius: 0 50% 0 50%;
+                background: darksalmon;
+                transform: rotate(90deg);
+            }
+            75%{
+                border-radius: 50% 0 50% 0;
+                background: salmon;
+                transform: rotate(135deg);
+            }
+            100%{
+                border-radius: 50% 0 50% 0;
+                background: lightsalmon;
+                transform: rotate(180deg);
+            }
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Animation!</title>
+</head>
+<body>
+    <div class="square">
+
+    </div>
+</body>
+<footer>
+
+</footer>
+</html>
