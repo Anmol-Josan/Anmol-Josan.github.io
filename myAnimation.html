@@ -12,7 +12,7 @@
             margin: 200px auto;
             animation-name: square-to-circle;
             animation-duration: 2s;
-            animation-timing-function: cubic-bezier(1000, 1000, 1, 1);
+            animation-timing-function: linear;
             animation-delay: .5s;
             animation-iteration-count: infinite;
             animation-direction: normal;
@@ -23,26 +23,31 @@
                 border-radius: 0 50% 0 50%;
                 background: lightsalmon;
                 transform: rotate(0deg);
+                scale: 100%;
             }
             25%{
                 border-radius: 50% 0 50% 0;
                 background: salmon;
                 transform: rotate(90deg);
+                scale: 125%;
             }
             50%{
                 border-radius: 0 50% 0 50%;
                 background: darksalmon;
                 transform: rotate(180deg);
+                scale: 150%;
             }
             75%{
                 border-radius: 50% 0 50% 0;
                 background: salmon;
                 transform: rotate(270deg);
+                scale: 125%;
             }
             100%{
                 border-radius: 0 50% 0 50%;
                 background: lightsalmon;
                 transform: rotate(360deg);
+                scale: 100%;
             }
         }
 
