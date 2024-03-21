@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(52, 52, 52);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+}
+
+body:not(p){
+    color:rgb(76, 76, 76);
+}
+
+h1,h2,h4{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-size: 115%;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1000px;
+    background: white;
+    padding: 20px;
+}
+
+pre code{
+    background: #eee;
+    border: 1px solid black;
+    display:block;
+    padding:20px;
+    color:black;
+}
+
+a{
+    color:red;
+}
+
+a:visited{
+    color:green;
+}
+
+a:hover {
+    text-decoration: red wavy underline;
+}
+
+a:active{
+    color:yellow;
+}
+
+a.special{
+    color:orange;
+}
+
+#first p:first-child{
+    color:red;
+}
+
+#first p:last-child{
+    font-weight: bold;
+}
+
+#pseudo-elements::first-letter{
+    font-size: 2em;
+}
+
+#pseudo-elements::before{
+    content: "Read This:";
+    font-weight: bold;
+}
+
+#pseudo-elements::after{
+    content: " Remember This";
+    font-weight: bold;
+}
+
+#focus-input:focus{
+    background-color: black;
+    color:white;
+}
+
+input:checked{
+    height:50px;
+    width:50px;
+}
+
+input:optional{
+    width: 50px;
+}
