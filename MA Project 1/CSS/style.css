@@ -1,5 +1,15 @@
 body{
+    align-items: center;
     background-color: rgb(44, 44, 44);
+}
+
+h1,h2,h4{
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4{
+    font-size: 115%;
 }
 
 .grid-container{
@@ -8,6 +18,26 @@ body{
     grid-template-columns: 33% 33% 33%;
     gap: 1%;
     margin: 1% 10%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 2em;
+    background-color: rgb(96, 96, 96);
+    width: 80.8%;
+    margin: auto auto;
+    margin-left: 9.99%;
+  }
+  
+.container > * {
+    flex: 1;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
 }
 
 .grid-item{
@@ -20,26 +50,6 @@ body{
 .item1{
     grid-column: 1 / span 3;
     grid-row: 1;
-}
-
-.item2{
-    grid-column: 1 / span 3;
-    grid-row: 2;
-}
-
-.item3{
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.item4{
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.item5{
-    grid-column: 3;
-    grid-row: 3;
 }
 
 ul {
@@ -75,11 +85,14 @@ li a {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     font-size: 200%;
+    align-self: center;
+    margin: auto;
 }
 
 .normal-text{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+    align-self: center;
     font-size: 100%;
 }
 
@@ -89,4 +102,54 @@ li a {
 
 div{
     text-align: center;
+}
+
+.part1{
+    width: 33%;
+}
+
+.part2{
+    width: 33%;
+}
+
+.part3{
+    width: 33%;
+}
+
+.rowsFlexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columnsFlex {
+    flex-direction: column;
+    width:auto;
+    height: 760px;
+}
+
+.childFlex {
+    border-radius: 3px;
+    background-color: rgb(96, 96, 96);
+    border: 1px solid #202020;
+    box-sizing: border-box;
+    height: 100%;
+    flex-grow: 1;
+}
+
+.columnsFlex .childFlex {
+    height: auto;
+    width: 61.804697156983930778739184177998%;
+    margin-left: 0;
+}
+
+.flexBreak {
+    flex-basis: 100%;
+    height: 0;
+    margin: 0;
+}
+
+.columnsFlex .flexBreak {
+  width: 0;
+  height: 100%;
 }
