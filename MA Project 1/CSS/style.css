@@ -59,21 +59,21 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #000000;
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
 }
 
-ul :hover{
+ul li:hover{
     background-color: red;
 }
 
-li {
+ul li {
     float: left;
     border-right: 1px solid #bbb;
 }
   
-li a {
+ul li a {
     display: inline-block;
     color: white;
     text-align: center;
@@ -177,7 +177,8 @@ div{
 
 #container{
     margin: 0 auto;
-    width: 1000px;
+    color: black;
+    width: 70%;
     background: white;
     padding: 20px;
 }
