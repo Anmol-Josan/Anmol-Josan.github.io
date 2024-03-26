@@ -120,7 +120,7 @@ div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 100vh;
+    height:100vh;
 }
 
 .columnsFlex {
