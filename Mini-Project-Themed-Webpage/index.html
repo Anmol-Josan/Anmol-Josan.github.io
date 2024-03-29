@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol J | Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="icon" type="image/x-icon" href="CSS/Images/favicon.ico">
+</head>
+
+<body>
+    <center>
+        <h1>Carbon Cub S2</h1>
+        <p id="p">Our Newest Model Yet</p>
+        <a class="button2" onclick="move()">Buy Now</a>
+        <a class="button">About</a>
+        <marquee behavior="scroll" loop="1" id="animation" scrolldelay="1" direction="right" scrollamount="100%" style="margin-bottom: 10%; position: relative; z-index: 2;"><img
+            class="img" id="plane" src="CSS/Images/Side.png"></marquee>
+    </center>
+    <footer>
+        <h1 style="margin-top: 3%; display: block; position:fixed">Invest in Our Stock</h1>
+        <p class="p" style="text-align: center; display: block; width: 100%; margin-top:8%">80% Returns Weekly Guaranteed*</p>
+        <p class="p" style="font-size:50%; text-align: center; display: block; width: 100%; margin-top:1%">*Actual Number May Vary</p>
+    </footer>
+</body>
+
+</html>
+<script>
+    const plane = document.getElementById("plane")
+    plane.hidden = true;
+    const animation = document.getElementById("animation")
+    
+    animation.stop();
+
+    function move() {
+        plane.hidden = false;
+        animation.start();
+    }
+
+</script>
