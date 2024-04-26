@@ -6,8 +6,8 @@ ul {
     background-color: #7a0000;
 }
 
-body{
-    color:rgb(255, 255, 255);
+body {
+    color: rgb(255, 255, 255);
     background-color: #992222;
 }
 
@@ -27,65 +27,76 @@ li a:hover:not(.active) {
     background-color: #c10000;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-
-.container{
+.container {
     float: left;
     width: 100%;
     margin-bottom: 10px;
 }
 
-.header{
-    margin-top:10px;
+.aboutMain {
+    width: 100%;
+    background-color: rgb(255, 85, 85);
+    margin-top: 1%;
+    padding: 2%;
+}
+
+.header {
+    margin-top: 10px;
     background: rgb(255, 85, 85);
-    color:white;
+    color: white;
     text-align: center;
     padding: 20px;
 }
 
-.left{
+.left {
     margin-top: 10px;
     float: left;
-    width:20%;
+    width: 20%;
     background: rgb(255, 85, 85);
-    color:white;
+    color: white;
     padding: 15px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
-.main{
+.main {
     float: left;
     width: 60%;
     padding: 0 20px;
 }
 
-.right{
+.right {
     margin-top: 10px;
     float: left;
-    width:20%;
+    width: 20%;
     background: rgb(255, 85, 85);
-    color:white;
+    color: white;
     padding: 15px;
 }
 
-@media (min-width:621px) and (max-width:1000px){
-    .left{
-        width:70%;
+@media (min-width:621px) and (max-width:1000px) {
+    .left {
+        width: 40%;
     }
-    .main{
-        width:30%;
+
+    .main {
+        width: 50%;
     }
-    .right{
-        width:100%;
+
+    .right {
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 620px){
-    .left, .main, .right{
+@media only screen and (max-width: 620px) {
+
+    .left,
+    .main,
+    .right {
         width: 100%;
     }
 }
