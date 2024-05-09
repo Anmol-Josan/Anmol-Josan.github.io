@@ -2,36 +2,131 @@
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    margin-top:0;
+body {
     font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     background-color: rgb(188, 235, 255);
-    color:black;
 }
 
-.nav{
-    top:0;
-    margin-top: 0;
-    float: left;
-    background-color: rgb(41, 84, 126);
-    align-items: center;
-    width: 100%;
-}
-
-.nav-inner{
+.spacer {
     padding: 30px;
+    background-color: rgb(188, 235, 255);
+}
+
+.nav {
+    color: white;
+    background-color: rgb(41, 84, 126);
+}
+
+.other-nav {
+    height: 60px;
+    background-color: rgb(41, 84, 126);
+    color: white;
     align-items: center;
-    float: center;
+    position: sticky;
+    overflow: hidden;
+    transition: 0.4s;
+    margin: auto;
 }
 
-nav{
-
+.other-nav1 {
+    padding: 18px 0;
+    margin: auto;
+    position: sticky;
+    left: 0;
+    transition: all 300ms ease;
 }
 
-.nav-inner a{
-    padding: 10px;
-    background: rgb(74, 151, 227);
+.other-nav1 a {
+    left: 0;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 12px;
     text-decoration: none;
-    color:white;border-radius: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: all 300ms ease;
+}
+
+.item {
+    background: rgb(74, 151, 227);
+    color: white;
+    margin-top: 10px;
+}
+
+.bottom {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 599px) {
+    .item {
+        width: 100%;
+    }
+
+    .container {
+        width: 90vw;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .other-nav1 a {
+        font-size: 90%;
+    }
+
+    .spacer {
+        padding: 10px;
+    }
+}
+
+@media (min-width:600px) and (max-width:1000px) {
+    .item {
+        width: 100%;
+    }
+
+    .container {
+        width: 80vw;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .spacer {
+        padding: 10px;
+    }
+}
+
+@media (min-width:1001px) and (max-width:1022px) {
+    .item {
+        width: 100%;
+    }
+
+    .container {
+        width: 80vw;
+    }
+
+    .navbar {
+        display: none;
+    }
+}
+
+@media (min-width:1023px) {
+    .item {
+        width: 100%;
+    }
+
+    .container {
+        width: 80vw;
+    }
+
+    .navbar {
+        display: initial;
+    }
+
+    .other-nav {
+        display: none;
+    }
 }
