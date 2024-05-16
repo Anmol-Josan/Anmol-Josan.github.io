@@ -27,7 +27,7 @@ html {
 }
 
 #bg1 {
-    background-image: url(https://anmol-josan.github.io/home-page-facelift/Images/how-to-become-an-xray-tech.jpg);
+    background-image: url('../Images/how-to-become-an-xray-tech.jpg');
     height: 100vh;
 }
 
