@@ -1,0 +1,42 @@
+.justify-center {
+    justify-content: center;
+}
+
+.title {
+    font-size: 10vh !important;
+}
+
+.is-centered {
+    text-align: center !important;
+}
+
+.subtitle {
+    font-size: 4vh !important;
+}
+
+.spacer {
+    margin-top: 5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 5vh !important;
+    }
+
+    .subtitle {
+        font-size: 2vh !important;
+    }
+}
+
+#search {
+    width: 60%;
+}
+
+.width-less {
+    width: 100%;
+    background: #c4ffec !important;
+}
