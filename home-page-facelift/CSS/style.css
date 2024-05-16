@@ -22,6 +22,15 @@ html {
     scroll-behavior: smooth;
 }
 
+.black-text{
+    color:black !important;
+}
+
+#bg1 {
+    background-image: url(/Anmol-Josan.gitub.io-1/home-page-facelift/Images/how-to-become-an-xray-tech.jpg);
+    height: 100vh;
+}
+
 @media screen and (max-width: 768px) {
     .title {
         font-size: 5vh !important;
