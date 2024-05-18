@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Josan | Index</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>Welcome to my website</h1>
+            <p>This is a demo website for switching themes upon clicking a button</p>
+            <p>Click the button below to switch the theme</p>
+            <button class="dark theme-switcher bigger-text" onclick="setTheme('dark')">Dark</button>
+            <button class="light theme-switcher bigger-text" onclick="setTheme('light')">Light</button>
+            </br>
+            <div class="image"></div>
+        </section>
+    </main>
+</body>
+
+<script>
+    const setTheme = theme => document.documentElement.className = theme;
+</script>
+
+</html>

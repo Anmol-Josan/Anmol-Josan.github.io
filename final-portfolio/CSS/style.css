@@ -1,0 +1,66 @@
+html,
+body,
+section {
+    block-size: 100%;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+section:nth-child(1) {
+    background: #00ED64;
+}
+
+section:nth-child(2) {
+    background: #000000;
+    color: white;
+}
+
+section:nth-child(3) {
+    background: #e2ffdc;
+    color: rgb(0, 0, 0);
+}
+
+section:nth-child(4) {
+    background: #6ed38c;
+    color: rgb(0, 0, 0);
+}
+
+/*Above code by https://codepen.io/argyleink/pen/yLovWjz, with some changes made by me*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.break{
+    width: 100%;
+}
+
+.big {
+    margin:0;
+    font-size: 10vw;
+}
+
+.spacer{
+    width:5%;
+}
+
+* {
+    box-sizing: border-box;
+}
