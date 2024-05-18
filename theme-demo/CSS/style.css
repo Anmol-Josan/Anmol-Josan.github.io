@@ -1,12 +1,12 @@
 :root,
 :root.light {
-    --bg-url: url(../images/bg-light.webp);
+    --bg-url: url(../Images/bg-light.webp);
     --bg-color: #fff;
     --text-color: #123;
 }
 
 :root.dark {
-    --bg-url: url(../images/bg-dark.jpeg);
+    --bg-url: url(../Images/bg-dark.jpeg);
     --bg-color: #121212;
     --text-color: #9a9a9a;
 }
