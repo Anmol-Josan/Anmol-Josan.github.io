@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Josan | Index</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Web 2!</h1>
+        <h4>Today, we will mess with light and dark modes.</h4>
+
+        <h2>First, lets dive into changing font colors</h2>
+
+        <p>In CSS and JS we can make a button change a variable by using this:</p>
+        <pre>
+    <code>const setTheme = theme => document.documentElement.className = theme;</code>
+        </pre>
+        <p>Then we create two buttons that look like this:<p></p>
+            <button class="dark theme-switcher" style="width:min-content; height:min-content;"
+                onclick="setTheme('dark')">Dark</button>
+            <button class="light theme-switcher" style="width:1min-content; height:min-content;"
+                onclick="setTheme('light')">Light</button>
+        </p>
+        <pre>
+            <code id="text"><a><</a>button class="dark theme-switcher bigger-text" onclick="setTheme('dark')">Dark</button>
+<a><</a>button class="light theme-switcher bigger-text" onclick="setTheme('light')">Light</button></code>
+        </pre>
+        <p>In our CSS we put:</p>
+        <pre>
+            <code>:root,
+:root.light {
+    --bg-color: #000000;
+    --container-color: #ffffff;
+    --text-color: rgb(0, 0, 0);
+}
+
+:root.dark {
+    --bg-color: #565656;
+    --container-color: #000000;
+    --text-color: #ffffff;
+}</code>
+        </pre>
+        <p>Later, wherever we want to change the color, so for example, the background of the container, we put this and change the --container-color to the corresponding <var></var>:</p>
+        <pre>
+            <code>background: var(--container-color);</code>
+        </pre>
+        <p>And that's it! You can now switch text light and dark modes.</p>
+    </div>
+</body>
+
+<script>
+    const setTheme = theme => document.documentElement.className = theme;
+</script>
+
+</html>
