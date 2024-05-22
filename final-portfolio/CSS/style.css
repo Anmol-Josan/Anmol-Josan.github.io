@@ -5,12 +5,13 @@ section {
 }
 
 html {
+    color: white;
     scroll-snap-type: y mandatory;
 }
 
 section {
     scroll-snap-align: start;
-    scroll-snap-stop: always;
+    scroll-snap-stop:always;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -19,46 +20,61 @@ section {
     flex-direction: row;
 }
 
+/*Above code by https://codepen.io/argyleink/pen/yLovWjz, with some changes made by me*/
+
 section:nth-child(1) {
-    background: #00ED64;
+    background: #E28413;
 }
 
 section:nth-child(2) {
-    background: #000000;
-    color: white;
+    background: #DD4B1A;
 }
 
 section:nth-child(3) {
-    background: #e2ffdc;
-    color: rgb(0, 0, 0);
+    background: #F56416;
 }
 
 section:nth-child(4) {
-    background: #6ed38c;
-    color: rgb(0, 0, 0);
+    background: #991602;
 }
 
-/*Above code by https://codepen.io/argyleink/pen/yLovWjz, with some changes made by me*/
+section:nth-child(5) {
+    background: #DD4B1A;
+}
+
+.back{
+    z-index: 5;
+}
+
+h2{
+    font-size: 3vh;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family:AvenirNextLTPro-Regular;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
 
-.break{
+.break {
     width: 100%;
 }
 
+.moveOut {
+    transform: translateX(-100vw);
+    -webkit-transition: transform 2s ease-in-out;
+}
+
 .big {
-    margin:0;
+    margin: 0;
+    z-index: 1;
     font-size: 10vw;
 }
 
-.spacer{
-    width:5%;
+.spacer {
+    width: 5%;
 }
 
 * {
