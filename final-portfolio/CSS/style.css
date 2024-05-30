@@ -11,7 +11,7 @@ html {
 
 section {
     scroll-snap-align: start;
-    scroll-snap-stop:always;
+    scroll-snap-stop: always;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -22,36 +22,36 @@ section {
 
 /*Above code by https://codepen.io/argyleink/pen/yLovWjz, with some changes made by myself*/
 
-section:nth-child(1) {
+section:nth-child(2) {
     background: #E28413;
 }
 
-section:nth-child(2) {
-    background: #DD4B1A;
-}
-
 section:nth-child(3) {
-    background: #F56416;
+    background: #DD4B1A;
 }
 
 section:nth-child(4) {
-    background: #991602;
+    background: #F56416;
 }
 
 section:nth-child(5) {
+    background: #991602;
+}
+
+section:nth-child(6) {
     background: #DD4B1A;
 }
 
-.back{
+.back {
     z-index: 5;
 }
 
-h2{
+h2 {
     font-size: 3vh;
 }
 
 body {
-    font-family:AvenirNextLTPro-Regular;
+    font-family: AvenirNextLTPro-Regular;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -79,4 +79,32 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+.hamburger-button {
+    position: fixed;
+    background-color: #a40000;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links {
+    position: inherit;
+    display: none;
+    background-color: #7a0000;
+    color: white;
+}
+
+.nav-links a {
+    position: inherit;
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: rgb(83, 0, 0);
 }
