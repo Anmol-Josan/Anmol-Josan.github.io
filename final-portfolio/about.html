@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="JS/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Josan | About</title>
+</head>
+
+<body>
+    <div id="hamburger-menu">
+        <button class="hamburger-button"> ☰ </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Page 1</a>
+            <a href="#">Page 2</a>
+        </div>
+    </div>
+    <section class="hero is-fullheight black">
+        <div class="hero-body">
+            <div class="left rightly-padded">
+                <p class="title semi-big">Web Design Reimagined</p>
+                <p class="subtitle">A passionate web designer years of experience in creating beautiful
+                    and user-friendly websites. My journey began in the early days of the internet, and since then, I’ve
+                    been fascinated by the ever-evolving digital landscape.</p>
+            </div>
+            <div class="right">
+                <img src="Images/OIG1.jpg" alt="Picture" style="width: 55vw;">
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight black">
+        <div class="hero-body" style="text-align: right; float:right">
+            <div class="left wider">
+                <p class="title semi-big">My Philosophy</p>
+                <p class="subtitle wider">I believe that a great website is not just about stunning visuals — it’s about
+                    crafting an experience that resonates with the audience. It’s a delicate balance of aesthetics,
+                    functionality, and storytelling that makes a site memorable.</p>
+            </div>
+            <div class="sky">
+                <div class="meteor" style="left: 50%; width: 2px; height: 100px; animation-delay: 1s;"></div>
+            </div>
+        </div>
+    </section>
+</body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .wider {
+        width: 60vw !important;
+    }
+
+    body {
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        background-color: black;
+    }
+
+    .sky {
+        z-index: 5;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    .meteor {
+        position: absolute;
+        bottom: 100%;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 50%;
+        opacity: 0;
+        animation: shoot 2s linear infinite;
+    }
+
+    @keyframes shoot {
+        0% {
+            bottom: 100%;
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            bottom: 0;
+            opacity: 0;
+            transform: translateX(300px) rotate(45deg);
+        }
+    }
+
+    .semi-big {
+        font-size: 5vw;
+    }
+
+    .rightly-padded {
+        margin-right: 5vw;
+    }
+
+    .black {
+        background-color: black;
+    }
+
+    .hero {
+        gap: 10px;
+        align-content: flex-start;
+    }
+
+    .left {
+        width: 50vw;
+    }
+
+    .right {
+        width: auto;
+    }
+
+    #hamburger-menu {
+        position: fixed;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+</style>
+
+</html>

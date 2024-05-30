@@ -5,6 +5,7 @@ section {
 }
 
 html {
+    background-color:#F56416;
     color: white;
     scroll-snap-type: y mandatory;
 }
@@ -21,26 +22,6 @@ section {
 }
 
 /*Above code by https://codepen.io/argyleink/pen/yLovWjz, with some changes made by myself*/
-
-section:nth-child(2) {
-    background: #E28413;
-}
-
-section:nth-child(3) {
-    background: #DD4B1A;
-}
-
-section:nth-child(4) {
-    background: #F56416;
-}
-
-section:nth-child(5) {
-    background: #991602;
-}
-
-section:nth-child(6) {
-    background: #DD4B1A;
-}
 
 .back {
     z-index: 5;
@@ -91,14 +72,14 @@ body {
 }
 
 .nav-links {
-    position: inherit;
+    position: relative;
     display: none;
     background-color: #7a0000;
     color: white;
 }
 
 .nav-links a {
-    position: inherit;
+    position:static;
     display: block;
     padding: 15px;
     color: white;

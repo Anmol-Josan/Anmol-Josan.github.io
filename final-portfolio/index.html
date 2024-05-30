@@ -14,15 +14,15 @@
     <div id="hamburger-menu">
         <button class="hamburger-button"> ☰ </button>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
             <a href="#">Page 1</a>
             <a href="#">Page 2</a>
         </div>
     </div>
-    <section style="text-align: center;">
+    <section style="text-align: center;" id="first">
         <h1 class="big">Anmol Josan's Portfolio</h1>
         <div class="break"></div>
         <h2>Let's Take A Look At My Work</h2>
@@ -40,5 +40,37 @@
         <h2 class="big">slide 5</h2>
     </section>
 </body>
+<style>
+    section:nth-child(2) {
+        background: #E28413;
+    }
+
+    section:nth-child(3) {
+        background: #DD4B1A;
+    }
+
+    section:nth-child(4) {
+        background: #F56416;
+    }
+
+    section:nth-child(5) {
+        background: #991602;
+    }
+
+    section:nth-child(6) {
+        background: #DD4B1A;
+    }
+
+    #hamburger-menu {
+        scroll-snap-align: start;
+        position:fixed;
+        width: 100%;
+        z-index: 5;
+    }
+
+    .nav-links{
+        text-align: center;
+    }
+</style>
 
 </html>
