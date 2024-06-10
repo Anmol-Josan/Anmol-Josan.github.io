@@ -3,23 +3,23 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 380,
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#00FF00"
+      "value": "#FFFFFF"
     },
     "shape": {
       "type": "circle",
       "stroke": {
         "width": 0,
-        "color": "#000000"
+        "color": "#FFFFFF"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 7
       },
       "image": {
         "src": "img/github.svg",
@@ -42,17 +42,17 @@ particlesJS("particles-js", {
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
+        "speed": 200,
+        "size_min": 1.1,
         "sync": false
       }
     },
     "line_linked": {
       "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
+      "distance": 300,
+      "color": "#FFFFFF",
       "opacity": 0.4,
-      "width": 1
+      "width": 1.5
     },
     "move": {
       "enable": true,
@@ -64,7 +64,7 @@ particlesJS("particles-js", {
       "bounce": false,
       "attract": {
         "enable": false,
-        "rotateX": 600,
+        "rotateX": 1200,
         "rotateY": 1200
       }
     }
@@ -86,22 +86,22 @@ particlesJS("particles-js", {
       "grab": {
         "distance": 140,
         "line_linked": {
-          "opacity": 1
+          "opacity": 1.5
         }
       },
       "bubble": {
         "distance": 400,
-        "size": 40,
+        "size": 70,
         "duration": 2,
         "opacity": 8,
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 50,
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 1
       },
       "remove": {
         "particles_nb": 2
@@ -119,7 +119,7 @@ stats = new Stats;
 stats.setMode(0);
 stats.domElement.style.position = 'absolute';
 stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
+stats.domElement.style.top = '100px';
 document.body.appendChild(stats.domElement);
 count_particles = document.querySelector('.js-count-particles');
 update = function() {
