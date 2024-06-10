@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/script.js"></script>
     <meta charset="UTF-8">
@@ -21,6 +22,14 @@
             <a href="#">Page 1</a>
             <a href="#">Page 2</a>
         </div>
+    </div>
+    <div class="works">
+        <section class="hero is-fullheight black">
+            <h1 class="title big">Here Are Some Of My Works:</h1>
+        </section>
+        <section class="hero is-fullheight black">
+            <h1 class="title big">Here Are Some Of My Works:</h1>
+        </section>
     </div>
     <footer class="site-footer">
         <div class="container">
@@ -76,6 +85,29 @@
 
 </html>
 <style>
+    .big{
+        font-size: 3vh;
+    }
+
+    .black {
+        background-color: black;
+    }
+
+    .works {}
+
+    section {
+        display: flex;
+        justify-content: center !important;
+        scroll-snap-align: start;
+    }
+
+    body {
+        font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        background-color: black;
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+    }
+
     .site-footer {
         background-color: #26272b;
         padding: 45px 0 20px;
