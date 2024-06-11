@@ -23,37 +23,47 @@
             <a href="#">Page 2</a>
         </div>
     </div>
-    <div class="works">
-        <section class="hero is-fullheight black">
-            <h1 class="title big">Here Are Some Of My Works:</h1>
-        </section>
-        <section class="hero is-fullheight black">
-            <h2 class="title big">Particles.JS</h2>
-            <p class="subtitle">This is a visualization made using particles.js</p>
-            <iframe class="semi-wide" src="https://anmol-josan.github.io/final-portfolio/particles/"
-                title="Particles.JS code"></iframe>
-        </section>
-        <section class="hero is-fullheight black">
-            <h2 class="title big">Animation Project</h2>
-            <p class="subtitle">This is a simple CSS loading animation I made</p>
-            <iframe class="less-semi-wide" src="https://anmol-josan.github.io/animation/myAnimation"
-                title="Animation Demo"></iframe>
-        </section>
-        <section class="hero is-fullheight black resizable">
-            <h2 class="title big">Responsive Demo</h2>
-            <p class="subtitle">A demo for a template of a responsive website.</p>
-            <div class="resizable">
-                <iframe class="less-semi-wide" src="https://anmol-josan.github.io/responsive-demo/"
-                title="A responsive website"></iframe>
-            </div>
-        </section>
-        <section class="hero is-fullheight black">
-            <h2 class="title big">Particles.JS</h2>
-            <p class="subtitle">This is a visualization made using particles.js.</p>
-            <iframe class="semi-wide" src="https://anmol-josan.github.io/final-portfolio/particles/"
-                title="Particles.JS code"></iframe>
-        </section>
-    </div>
+    <section class="hero is-fullheight black">
+        <h1 class="title bigger">Here Are Some Of My Works:</h1>
+    </section>
+    <section class="hero is-fullheight black">
+        <h2 class="title big">Particles.JS</h2>
+        <p class="subtitle">This is a visualization made using particles.js</p>
+        <iframe class="semi-wide" src="https://anmol-josan.github.io/final-portfolio/particles/"
+            title="Particles.JS code"></iframe>
+    </section>
+    <section class="hero is-fullheight black" style="overflow: visible;">
+        <h2 class="title big">Animation Project</h2>
+        <p class="subtitle">This is a CSS loading animation</p>
+        <iframe src="https://anmol-josan.github.io/animation/myAnimation" title="Animation Demo"
+            style="height:500px;width:500px;"></iframe>
+    </section>
+    <section class="hero is-fullheight black resizable">
+        <h2 class="title big">Responsive Demo</h2>
+        <p class="subtitle">A demo for a template of a responsive website.</p>
+        <p>*Resize does not work in mobile.</p>
+        <div class="resizable">
+            <iframe src="https://anmol-josan.github.io/responsive-demo/" title="A responsive website"
+                style="width: 100%;"></iframe>
+        </div>
+    </section>
+    <section class="hero is-fullheight black">
+        <h2 class="title big">Pseudo Demo</h2>
+        <p class="subtitle">This is a demo of using pseudo CSS.</p>
+        <iframe class="pseudo" src="https://anmol-josan.github.io/pseudo-demo/" title="Particles.JS code"></iframe>
+    </section>
+    <section class="hero is-fullheight black">
+        <h2 class="title big">Theme Demo</h2>
+        <p class="subtitle">This is a demo I created!</p>
+        <iframe class="theme semi-wide" src="https://anmol-josan.github.io/theme-demo/demo.html"
+            title="Particles.JS code"></iframe>
+    </section>
+    <section class="hero is-fullheight black">
+        <h2 class="title big">Home Page Facelift</h2>
+        <p class="subtitle">This is a local companies website I made better!</p>
+        <iframe class="semi-wide home-page" src="https://anmol-josan.github.io/home-page-facelift"
+            title="Particles.JS code"></iframe>
+    </section>
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -67,10 +77,12 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Navigation</h6>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="current.html">Current Works</a>
                     </ul>
                 </div>
 
@@ -108,6 +120,28 @@
 
 </html>
 <style>
+    @media screen and (min-width: 600px) {
+        .semi-wide {
+            width: 50% !important;
+            height: 60vh !important;
+        }
+
+        .theme{
+            width: 90% !important;
+            height: 60vh !important;
+        }
+
+        .pseudo {
+            width: 90% !important;
+            height: 60vh !important;
+        }
+
+        .home-page{
+            width: 90% !important;
+            height: 60vh !important;
+        }
+    }
+
     .resizable {
         resize: both;
         overflow: auto;
@@ -119,21 +153,29 @@
         height: 40vh;
     }
 
+    .pseudo {
+        width: 100%;
+        height: 40vh;
+    }
+
     .less-semi-wide {
+        width: 50%;
         height: 40vh;
     }
 
     .big {
-        font-size: 3vh;
+        font-size: 3.5vh;
+    }
+
+    .bigger {
+        font-size: 5vh;
     }
 
     .black {
         text-align: center;
-        line-height: 1vh;
+        line-height: 1.1vh;
         background-color: black;
     }
-
-    .works {}
 
     section {
         display: flex;

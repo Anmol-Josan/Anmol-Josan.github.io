@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="CSS/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="JS/script.js"></script>
@@ -23,8 +23,11 @@
             <a href="#">Page 2</a>
         </div>
     </div>
+    <section style='background: url("./Images/resurrection-secret-beach-sunset.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover;'>
+        <h1 class="title is-1" style="text-shadow: 1px 1px 2px black;">About Me</h1>
+    </section>
     <section class="hero is-fullheight black">
-        <div class="hero-body">
+        <div class="hero-body hero-body1">
             <div class="left rightly-padded">
                 <p class="title semi-big">Web Design Reimagined</p>
                 <p class="subtitle">A passionate web designer years of experience in creating beautiful
@@ -37,10 +40,25 @@
         </div>
     </section>
     <section class="hero is-fullheight black second">
-        <div class="hero-body" style="text-align: right; float:right">
+        <div class="hero-body" style="text-align: right;">
             <div class="remaining sky">
                 <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
+                <div class="meteor"></div>
                 <div class="meteor-middle"></div>
+                <div class="meteor-middle"></div>
+                <div class="meteor-middle"></div>
+                <div class="meteor-middle"></div>
+                <div class="meteor-middle"></div>
+                <div class="meteor-middle"></div>
+                <div class="meteor-bottom"></div>
+                <div class="meteor-bottom"></div>
+                <div class="meteor-bottom"></div>
+                <div class="meteor-bottom"></div>
+                <div class="meteor-bottom"></div>
                 <div class="meteor-bottom"></div>
             </div>
             <div class="second-right">
@@ -65,10 +83,12 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Navigation</h6>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="pricing.html">Pricing</a>
+                        <a href="current.html">Current Works</a>
                     </ul>
                 </div>
 
@@ -109,6 +129,10 @@
         box-sizing: border-box;
     }
 
+    .float-right {
+        float: right
+    }
+
     .remaining {
         width: 30vw;
     }
@@ -145,58 +169,30 @@
         margin-top: 1vh;
     }
 
-    .meteor {
-        z-index: 3;
+    .meteor,
+    .meteor-middle,
+    .meteor-bottom {
+        top: 0;
         width: 10px;
         height: 10px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
-        border-radius: 50%;
-        opacity: 0;
-        animation: shoot 2s linear infinite;
+        left: calc(100% * var(--random-start));
+        background-color: white;
     }
 
-    @keyframes shoot {
-        0% {
-            bottom: 100%;
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        100% {
-            bottom: 0;
-            opacity: 0;
-            transform: translateX(300px) rotate(45deg) translateY(300px);
-        }
-    }
-
-    .meteor-bottom {
-        float: bottom;
-        margin-top: 35vh;
+    .meteor {
+        margin-top: 10vh;
         z-index: 4;
         width: 10px;
         height: 10px;
         background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
         border-radius: 50%;
         opacity: 0;
-        animation: shootUp 2s linear infinite;
-    }
-
-    @keyframes shootUp {
-        0% {
-            bottom: 100%;
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        100% {
-            bottom: 0;
-            opacity: 0;
-            transform: translateX(300px) rotate(-45deg) translateY(-300px);
-        }
+        animation: shoot 2s linear infinite;
+        animation-delay: calc(-2s * var(--random-start));
     }
 
     .meteor-middle {
-        margin-top: 35vh;
+        margin-top: 5vh;
         z-index: 1;
         width: 10px;
         height: 10px;
@@ -204,19 +200,56 @@
         border-radius: 50%;
         opacity: 0;
         animation: shootmid 2s linear infinite;
+        animation-delay: calc(-1.03s * var(--random-start));
+    }
+
+    .meteor-bottom {
+        z-index: 1;
+        z-index: 2;
+        margin-top: 5vh;
+        z-index: 4;
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 50%;
+        opacity: 0;
+        animation: shootUp 2s linear infinite;
+        animation-delay: calc(-2s * var(--random-start));
+    }
+
+    @keyframes shoot {
+        0% {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(300px) translateY(-100vh);
+        }
     }
 
     @keyframes shootmid {
         0% {
-            bottom: 100%;
             opacity: 1;
-            transform: translateX(0);
+            transform: translateX(0) translateY(0);
         }
 
         100% {
-            bottom: 0;
             opacity: 0;
-            transform: translateX(500px);
+            transform: translateX(500px) translateY(-100vh);
+        }
+    }
+
+    @keyframes shootUp {
+        0% {
+            opacity: 1;
+            transform: translateX(0) translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(300px) translateY(-100vh);
         }
     }
 
@@ -254,6 +287,45 @@
 
     .nav-links {
         text-align: center;
+    }
+
+    @media (max-width: 600px) {
+        .sky {
+            width: 100%;
+            height: 50vh;
+        }
+
+        .second-right {
+            width: 100% !important;
+            text-align: left;
+        }
+
+        .float-right {
+            float: none;
+        }
+
+        .hero-body {
+            align-content: center;
+            flex-wrap: wrap !important;
+        }
+
+        .hero-body1 {
+            align-content: center !important;
+            gap: 1px !important;
+            flex-wrap: wrap !important;
+        }
+
+        .title {
+            font-size: 5vh;
+        }
+
+        .semi-big {
+            width: 100%;
+        }
+
+        .left {
+            width: 100%;
+        }
     }
 
     /*Footer from https://csshint.com/html-css-footer-design/*/
@@ -391,5 +463,19 @@
         background-color: #ea4c89
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const meteors = document.querySelectorAll('.meteor, .meteor-middle, .meteor-bottom');
+        meteors.forEach(meteor => {
+            const randomStart = Math.random();
+            meteor.style.setProperty('--random-start', randomStart);
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            meteor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        });
+    });
+</script>
 
 </html>
