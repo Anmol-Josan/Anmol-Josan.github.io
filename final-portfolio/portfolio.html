@@ -23,8 +23,9 @@
             <a href="current.html">Current Works</a>
         </div>
     </div>
-    <section class="hero is-fullheight black">
-        <h1 class="title bigger">Here Are Some Of My Works:</h1>
+    <section class="hero is-fullheight black first">
+        <img class="rocket" src="./Images/rocket-removebg-preview.png" alt="">
+        <h1 class="title bigger" style="z-index: 1;">Here Are Some Of My Works:</h1>
     </section>
     <section class="hero is-fullheight black">
         <h2 class="title big">Particles.JS</h2>
@@ -73,7 +74,7 @@
                         beautiful and user-friendly websites. Fascinated by the ever-evolving digital landscape since
                         the early days of the internet.</p>
                 </div>
-    
+
                 <div class="col-xs-6 col-md-3">
                     <h6>Navigation</h6>
                     <ul class="footer-links">
@@ -85,7 +86,7 @@
                         <li><a href="current.html">Current Works</a></li>
                     </ul>
                 </div>
-    
+
                 <div class="col-xs-6 col-md-3">
                     <h6>Contact</h6>
                     <ul class="footer-links">
@@ -103,7 +104,7 @@
                         <a href="#">Anmol Josan</a>.
                     </p>
                 </div>
-    
+
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
                         <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
@@ -126,7 +127,7 @@
             height: 60vh !important;
         }
 
-        .theme{
+        .theme {
             width: 90% !important;
             height: 60vh !important;
         }
@@ -136,11 +137,60 @@
             height: 60vh !important;
         }
 
-        .home-page{
+        .home-page {
             width: 90% !important;
             height: 60vh !important;
         }
     }
+
+    @keyframes gradientBackground {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .first {
+        position: relative;
+    }
+
+    .rocket {
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        z-index: 2;
+        animation: rocketAnimation 7s ease-in 1;
+        opacity: 0;
+    }
+
+    @keyframes rocketAnimation {
+        0% {
+            transform: translateX(-100vw) translateY(30vh) rotate(90deg);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateX(100vw) translateY(-50vh);
+            opacity: 1;
+        }
+    }
+
+
+    @media screen and (min-width: 600px) {
+        .first {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+    }
+
 
     .resizable {
         resize: both;
@@ -188,6 +238,7 @@
         background-color: black;
         overflow: auto;
         scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
     }
 
     .site-footer {
