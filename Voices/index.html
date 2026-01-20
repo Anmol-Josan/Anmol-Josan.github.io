@@ -12,7 +12,6 @@
         }
 
         :root {
-            /* Color Palette */
             --indigo: #2E4057;
             --indigo-dark: #1a2633;
             --parchment: #F5F1E3;
@@ -22,21 +21,15 @@
             --charcoal-light: #4A5A6A;
             --white: #FFFFFF;
             --off-white: #FAFAF8;
-            
-            /* Typography */
             --font-serif: 'Crimson Text', 'Georgia', serif;
             --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
-            
-            /* Spacing */
             --spacing-xs: 0.5rem;
             --spacing-sm: 1rem;
             --spacing-md: 2rem;
             --spacing-lg: 4rem;
             --spacing-xl: 6rem;
-            
-            /* Layout */
             --max-width: 1200px;
-            --content-width: 800px;
+            --content-width: 920px;
         }
 
         html {
@@ -300,7 +293,7 @@
 
         .artifact-image {
             width: 100%;
-            height: 400px;
+            height: clamp(420px, 45vh, 760px);
             background: linear-gradient(135deg, var(--indigo-dark), var(--charcoal));
             display: flex;
             align-items: center;
@@ -310,7 +303,6 @@
         }
 
         .artifact-image img {
-            /* Ensure the full image is visible, preserve aspect ratio */
             max-width: 100%;
             max-height: 100%;
             width: auto;
@@ -552,7 +544,7 @@
             }
 
             .artifact-image {
-                height: 300px;
+                height: 360px;
             }
 
             .pullquote {
@@ -596,7 +588,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="nav">
         <div class="container">
             <a href="#hero" class="logo">Museum of Silenced Voices</a>
@@ -609,7 +600,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-content">
             <div class="hero-subtitle">The Legacy of Zora Neale Hurston in the American Imagination</div>
@@ -625,7 +615,6 @@
         </div>
     </section>
 
-    <!-- Overview Section -->
     <section class="overview" id="overview">
         <div class="container">
             <div class="content">
@@ -657,7 +646,6 @@
         </div>
     </section>
 
-    <!-- Artifact Gallery -->
     <section class="gallery" id="gallery">
         <div class="container">
             <div class="section-header">
@@ -665,7 +653,6 @@
                 <h2 class="section-title">Six Works of Resistance</h2>
             </div>
 
-            <!-- Artifact 1 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/COTTON-Threads-of-Change_web.jpg" alt="Princess Sophia Duleep Singh in elaborate textile composition" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -697,7 +684,6 @@
                 </div>
             </article>
 
-            <!-- Artifact 2 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/Indigo-The-Colour-of-India.jpg" alt="Mughal Queen Mumtaz Mahal in modern blue jeans" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -729,7 +715,6 @@
                 </div>
             </article>
 
-            <!-- Artifact 3 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/Get-Your-Knee-Off-Our-Necks.jpg" alt="Political satire with Donald Trump and Statue of Liberty" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -761,7 +746,6 @@
                 </div>
             </article>
 
-            <!-- Artifact 4 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/Entwined.png" alt="Reimagined scene of immigrants arriving in Britain" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -793,7 +777,6 @@
                 </div>
             </article>
 
-            <!-- Artifact 5 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/Casualty.jpg" alt="Portrait of Maharaja Duleep Singh in exile" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -825,7 +808,6 @@
                 </div>
             </article>
 
-            <!-- Artifact 6 -->
             <article class="artifact">
                 <div class="artifact-image">
                     <img src="Images/BBC-Interview-Thumb.jpg" alt="BBC The Interview: The Singh Twins thumbnail" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
@@ -859,7 +841,6 @@
         </div>
     </section>
 
-    <!-- Interview/Audio Section -->
     <section class="audio-section" id="interview">
         <div class="container">
             <div class="content">
@@ -896,7 +877,6 @@
         </div>
     </section>
 
-    <!-- Reflection Section -->
     <section class="reflection" id="reflection">
         <div class="container">
             <div class="content">
@@ -944,7 +924,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <h3>Miniatures of Resistance</h3>
@@ -962,7 +941,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script>
         const nav = document.getElementById('nav');
         let lastScroll = 0;
