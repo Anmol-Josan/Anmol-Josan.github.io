@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miniatures of Resistance: The Singh Twins | Museum of Silenced Voices</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Color Palette */
+            --indigo: #2E4057;
+            --indigo-dark: #1a2633;
+            --parchment: #F5F1E3;
+            --gold: #C9A961;
+            --gold-light: #D4AF37;
+            --charcoal: #36454F;
+            --charcoal-light: #4A5A6A;
+            --white: #FFFFFF;
+            --off-white: #FAFAF8;
+            
+            /* Typography */
+            --font-serif: 'Crimson Text', 'Georgia', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+            
+            /* Layout */
+            --max-width: 1200px;
+            --content-width: 800px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            line-height: 1.7;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        p {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.125rem;
+        }
+
+        .sans {
+            font-family: var(--font-sans);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border-bottom: 1px solid rgba(46, 64, 87, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--indigo);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: var(--spacing-md);
+        }
+
+        nav a {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--charcoal);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--indigo-dark) 0%, var(--indigo) 50%, var(--charcoal) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: var(--spacing-lg) var(--spacing-md);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(201, 169, 97, 0.03) 2px, rgba(201, 169, 97, 0.03) 4px),
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(201, 169, 97, 0.03) 2px, rgba(201, 169, 97, 0.03) 4px);
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            max-width: var(--content-width);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            color: var(--parchment);
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-statement {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--parchment);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-md);
+            opacity: 0.95;
+        }
+
+        .scroll-indicator {
+            margin-top: var(--spacing-lg);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        section {
+            padding: var(--spacing-xl) var(--spacing-md);
+            position: relative;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .content {
+            max-width: var(--content-width);
+            margin: 0 auto;
+        }
+
+        .overview {
+            background: var(--white);
+            border-top: 4px solid var(--gold);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .section-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: var(--spacing-xs);
+            font-weight: 600;
+        }
+
+        .section-title {
+            color: var(--indigo);
+        }
+
+        .overview-intro {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: var(--spacing-lg);
+            color: var(--charcoal);
+        }
+
+        .pullquote {
+            border-left: 4px solid var(--gold);
+            padding-left: var(--spacing-md);
+            margin: var(--spacing-lg) 0;
+            font-size: 1.375rem;
+            font-style: italic;
+            color: var(--indigo);
+            line-height: 1.6;
+        }
+
+        .gallery {
+            background: var(--parchment);
+        }
+
+        .artifact {
+            background: var(--white);
+            margin-bottom: var(--spacing-xl);
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .artifact.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .artifact-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--indigo-dark), var(--charcoal));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .artifact-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(201, 169, 97, 0.05) 10px, rgba(201, 169, 97, 0.05) 20px);
+        }
+
+        .artifact-placeholder {
+            color: var(--parchment);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: var(--spacing-md);
+            opacity: 0.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        .artifact-content {
+            padding: var(--spacing-lg);
+        }
+
+        .artifact-meta {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            color: var(--charcoal-light);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+        }
+
+        .artifact-meta span {
+            padding-right: var(--spacing-sm);
+            border-right: 1px solid var(--gold);
+        }
+
+        .artifact-meta span:last-child {
+            border-right: none;
+        }
+
+        .artifact h3 {
+            color: var(--indigo);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .artifact-description {
+            margin-bottom: var(--spacing-md);
+        }
+
+        .artifact-label {
+            background: var(--parchment);
+            padding: var(--spacing-md);
+            border-left: 3px solid var(--gold);
+            margin-top: var(--spacing-md);
+        }
+
+        .artifact-label h4 {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--indigo);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .artifact-label p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .video-section {
+            background: var(--white);
+        }
+
+        .video-container {
+            margin-top: var(--spacing-lg);
+            background: var(--charcoal);
+            aspect-ratio: 16 / 9;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .video-placeholder {
+            color: var(--parchment);
+            text-align: center;
+            padding: var(--spacing-md);
+        }
+
+        .video-placeholder svg {
+            width: 64px;
+            height: 64px;
+            opacity: 0.5;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .video-context {
+            margin-top: var(--spacing-md);
+            font-size: 1rem;
+            color: var(--charcoal-light);
+            font-style: italic;
+        }
+        
+        .reflection {
+            background: var(--indigo-dark);
+            color: var(--parchment);
+        }
+
+        .reflection .section-label {
+            color: var(--gold-light);
+        }
+
+        .reflection .section-title {
+            color: var(--parchment);
+        }
+
+        .reflection p {
+            opacity: 0.95;
+        }
+
+        .reflection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+        }
+
+        .reflection-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: var(--spacing-md);
+            border-left: 3px solid var(--gold);
+            backdrop-filter: blur(10px);
+        }
+
+        .reflection-card h4 {
+            color: var(--gold-light);
+            font-size: 1.125rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        footer {
+            background: var(--charcoal);
+            color: var(--parchment);
+            padding: var(--spacing-lg) var(--spacing-md);
+            text-align: center;
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        footer p {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .footer-divider {
+            width: 60px;
+            height: 2px;
+            background: var(--gold);
+            margin: var(--spacing-md) auto;
+        }
+
+        .credits {
+            margin-top: var(--spacing-md);
+            font-size: 0.75rem;
+            opacity: 0.6;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: var(--spacing-sm);
+            }
+
+            nav a {
+                font-size: 0.75rem;
+            }
+
+            section {
+                padding: var(--spacing-lg) var(--spacing-sm);
+            }
+
+            .hero {
+                padding: var(--spacing-md) var(--spacing-sm);
+            }
+
+            .artifact-content {
+                padding: var(--spacing-md);
+            }
+
+            .artifact-image {
+                height: 300px;
+            }
+
+            .pullquote {
+                font-size: 1.125rem;
+            }
+
+            .reflection-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-lg {
+            margin-top: var(--spacing-lg);
+        }
+
+        .mb-lg {
+            margin-bottom: var(--spacing-lg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="container">
+            <a href="#hero" class="logo">Museum of Silenced Voices</a>
+            <ul>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#gallery">Artifacts</a></li>
+                <li><a href="#interview">Interview</a></li>
+                <li><a href="#reflection">Reflection</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-subtitle">The Legacy of Zora Neale Hurston in the American Imagination</div>
+            <h1>Miniatures of Resistance</h1>
+            <p class="hero-statement">
+                How twin sisters Amrit and Rabindra Kaur Singh use the ancient tradition of Indian miniature painting to give voice to the British Sikh diaspora and challenge colonial narratives.
+            </p>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 5v14M5 12l7 7 7-7"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="overview" id="overview">
+        <div class="container">
+            <div class="content">
+                <div class="section-header">
+                    <div class="section-label">Exhibit Overview</div>
+                    <h2 class="section-title">The Singh Twins Give Voice to the British Sikh Diaspora</h2>
+                </div>
+
+                <p class="overview-intro">
+                    Born in 1966 to Sikh immigrant parents in England, Amrit and Rabindra Kaur Singh—known collectively as The Singh Twins—faced discrimination as the only non-Catholic students in their school. When they pursued art education, their professors dismissed their work as "too traditional" and "unacceptable," insisting they abandon Indian miniature painting for Western contemporary styles.
+                </p>
+
+                <p>
+                    They refused to assimilate. Instead, The Singh Twins created what they call "Past-Modern" art—work that honors centuries-old techniques while addressing contemporary issues of identity, colonialism, and marginalization. Their intricate paintings preserve cultural heritage while giving voice to communities that dominant narratives have tried to silence.
+                </p>
+
+                <div class="pullquote">
+                    "We use the visual language of our ancestors to tell stories that official histories refuse to acknowledge."
+                </div>
+
+                <p>
+                    Like Zora Neale Hurston, who preserved Black Southern dialect as literature rather than mockery, The Singh Twins insist that their cultural traditions deserve respect in contemporary art spaces. Both artists demand that audiences meet them where they are, refusing to translate their culture into the dominant language. When you force a culture to speak in someone else's voice, you lose something essential.
+                </p>
+
+                <p>
+                    This exhibition explores six key works that demonstrate how The Singh Twins transform silence into sound, making visible the lives, struggles, and contributions of the British Sikh diaspora. Each piece resists erasure by placing marginalized figures at the center of historical narratives, painted with the same elaborate detail once reserved for emperors and royalty.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artifact Gallery -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Artifact Gallery</div>
+                <h2 class="section-title">Six Works of Resistance</h2>
+            </div>
+
+            <!-- Artifact 1 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        Cotton: Threads of Change (2018)<br>
+                        <small>Image: Princess Sophia Duleep Singh in elaborate textile composition</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2018</span>
+                        <span>Digital fabric lightbox artwork</span>
+                        <span>Slaves of Fashion Series</span>
+                    </div>
+                    <h3>Cotton: Threads of Change</h3>
+                    <div class="artifact-description">
+                        <p>
+                            This life-sized portrait features Princess Sophia Duleep Singh, a British-born Sikh suffragette and daughter of the last Maharaja of Punjab. She stands draped in cotton textiles, surrounded by symbolic imagery connecting the cotton trade to colonialism, slavery, and modern exploitation. Behind her, cotton fields represent both historical enslavement and contemporary forced labor.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The silenced story of a Sikh princess who fought for women's rights while her own community's history was being erased by British colonialism. Princess Sophia's story represents the intersection of Sikh, British, and feminist identity—a voice that was silenced by colonial history until The Singh Twins brought her forward.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By placing a forgotten Sikh woman at the center of suffragette history, The Singh Twins challenge the white-centered narrative of feminism and make visible the contributions of South Asian women to social justice movements. The elaborate detail demands that viewers recognize her dignity and importance.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artifact 2 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        Indigo: The Colour of India (2018)<br>
+                        <small>Image: Mughal Queen Mumtaz Mahal in modern blue jeans</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2018</span>
+                        <span>Digital fabric lightbox artwork</span>
+                        <span>Slaves of Fashion Series</span>
+                    </div>
+                    <h3>Indigo: The Colour of India</h3>
+                    <div class="artifact-description">
+                        <p>
+                            This striking piece depicts Mughal Queen Mumtaz Mahal wearing modern blue jeans. The detailed portrait traces the history of indigo dye, once known as "blue gold" and used as currency to buy enslaved people. The artwork reveals how denim—considered quintessentially Western—actually originated in India, where the coarse fabric was first produced in the village of Dongri (which gave us "dungaree").
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The erasure of Indian cultural and commercial contributions to global fashion, and the silencing of workers who were exploited for their craft. Intricate patterns and symbols throughout the piece tell the story of how Indian craftsmanship was appropriated and its origins forgotten during colonialism.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By visually connecting modern clothing to its Indian origins, The Singh Twins reclaim cultural ownership and make visible the hidden labor and creativity of South Asian people that was appropriated by Western colonial powers. The juxtaposition of historical figure and modern garment forces viewers to confront their assumptions about cultural origins.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artifact 3 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        Get Your Knee Off Our Necks (2020)<br>
+                        <small>Image: Political satire with Donald Trump and Statue of Liberty</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2020</span>
+                        <span>Mixed media on paper</span>
+                        <span>Slaves of Fashion Series</span>
+                    </div>
+                    <h3>Get Your Knee Off Our Necks</h3>
+                    <div class="artifact-description">
+                        <p>
+                            Created in response to the murder of George Floyd, this satirical portrait shows Donald Trump with his knee on the neck of the Statue of Liberty, who is gagged and bound. Trump's torso is tattooed with narcissus flowers, symbolizing narcissism. The background is filled with symbols representing America's foundation on slavery and the cotton trade.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The continuation of colonial violence and racism in modern politics, and the silencing of marginalized communities who protest injustice. The piece draws explicit parallels between historical colonialism and contemporary racism, connecting the exploitation of South Asian laborers to the oppression of Black Americans.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By using the visual language of political satire and historical symbolism, The Singh Twins make contemporary viewers confront uncomfortable truths about ongoing systems of oppression. They give voice to victims of state violence by connecting their struggles to broader patterns of historical exploitation.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artifact 4 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        EnTWINed (2006)<br>
+                        <small>Image: Reimagined scene of immigrants arriving in Britain</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2006</span>
+                        <span>Hand-painted miniature</span>
+                        <span>Commission for Museum of London</span>
+                    </div>
+                    <h3>EnTWINed</h3>
+                    <div class="artifact-description">
+                        <p>
+                            This complex painting reimagines a historical scene of immigrants arriving in Britain, but from an Indian perspective. Based on a 19th-century painting, The Singh Twins' version includes figures from the Indian diaspora throughout British history: Mahatma Gandhi, Indian soldiers who fought in World Wars I and II, and the artists' own grandmother and father. The skyline combines buildings from London, Birmingham, Liverpool, and Bradford—all cities with significant South Asian populations.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The invisible contributions of South Asian immigrants to British society and the erasure of their stories from mainstream British history. By including their own family members alongside historical figures, The Singh Twins assert that ordinary people's stories matter as much as those of famous leaders.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By inserting South Asian figures into the visual narrative of British history, The Singh Twins challenge the dominant story that Britain was built solely by white Europeans. They make visible the multicultural reality that official histories often ignore, demanding that immigrant contributions be recognized and celebrated.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artifact 5 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        Casualty of War (2000)<br>
+                        <small>Image: Portrait of Maharaja Duleep Singh in exile</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2000</span>
+                        <span>Hand-painted miniature</span>
+                        <span>The Iqbalnama Series</span>
+                    </div>
+                    <h3>Casualty of War: A Portrait of Maharaja Duleep Singh</h3>
+                    <div class="artifact-description">
+                        <p>
+                            This portrait depicts Maharaja Duleep Singh, the last ruler of the Sikh Empire in Punjab, who was forced to give up his throne as a child and spent his life in exile in Britain. The painting shows him in elaborate traditional dress, surrounded by symbols of his lost kingdom and his complicated relationship with the British Crown. The intricate details typical of Indian miniature painting contrast with the tragedy of his displacement and cultural erasure.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The violence of colonialism against Sikh sovereignty and the silencing of Sikh royal history and cultural identity. Duleep Singh's story represents the personal cost of empire—a child king stripped of his heritage and forced to live as a curiosity in the court of his conquerors.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By painting Duleep Singh with the dignity and detail reserved for European royalty, The Singh Twins restore honor to a figure whose story was deliberately obscured by British colonial narratives. They preserve Sikh heritage through traditional artistic methods, insisting that their cultural traditions deserve the same respect as Western art forms.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Artifact 6 -->
+            <article class="artifact">
+                <div class="artifact-image">
+                    <div class="artifact-placeholder">
+                        BBC Civilisations Stories (2020)<br>
+                        <small>Video: The Singh Twins discuss their artistic identity and resistance</small>
+                    </div>
+                </div>
+                <div class="artifact-content">
+                    <div class="artifact-meta">
+                        <span>2020</span>
+                        <span>Video interview excerpt</span>
+                        <span>BBC Documentary</span>
+                    </div>
+                    <h3>In Their Own Words: The Singh Twins Speak</h3>
+                    <div class="artifact-description">
+                        <p>
+                            In this interview, The Singh Twins discuss why they insist on being known collectively rather than as individuals, despite pressure from art professors to develop separate styles. They explain how their collaborative identity challenges Western individualism and honors Sikh values of community. They also discuss facing discrimination as the only Sikh students in their Catholic school and being told their focus on Indian miniature painting was "backward" and represented "all the taboos of contemporary Western art."
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>What It Represents</h4>
+                        <p>
+                            The silencing and marginalization of non-Western artistic traditions in European art education, and the pressure on immigrant artists to assimilate. Their story represents the experiences of countless artists who have been told their cultural heritage has no place in contemporary spaces.
+                        </p>
+                    </div>
+                    <div class="artifact-label">
+                        <h4>How It Resists Silence</h4>
+                        <p>
+                            By sharing their personal story of discrimination, The Singh Twins give voice to experiences that are often kept private out of shame or fear. Their success proves that preserving heritage and challenging Western art norms can coexist, and that cultural traditions are sources of strength rather than obstacles to overcome.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Interview/Video Section -->
+    <section class="video-section" id="interview">
+        <div class="container">
+            <div class="content">
+                <div class="section-header">
+                    <div class="section-label">Featured Interview</div>
+                    <h2 class="section-title">Voices of Resistance: The Artists Speak</h2>
+                </div>
+
+                <p>
+                    In this BBC Civilisations Stories documentary excerpt, The Singh Twins discuss their artistic philosophy, the discrimination they faced in British art schools, and why they choose to work collaboratively rather than as individual artists. Their conversation reveals how personal experiences of marginalization inform their artistic mission to give voice to silenced communities.
+                </p>
+
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <svg fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <p class="sans"><strong>BBC Civilisations Stories: The Singh Twins</strong></p>
+                        <p class="sans" style="font-size: 0.875rem; margin-top: 0.5rem;">
+                            Video embed placeholder<br>
+                            (Insert BBC interview link or iframe here)
+                        </p>
+                    </div>
+                </div>
+
+                <p class="video-context">
+                    "We were told that Indian miniature painting had no place in contemporary British art. But we knew that our cultural heritage wasn't something to be ashamed of—it was our greatest strength. By staying true to our traditions, we could tell stories that Western art had ignored for centuries."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflection Section -->
+    <section class="reflection" id="reflection">
+        <div class="container">
+            <div class="content">
+                <div class="section-header">
+                    <div class="section-label">Curatorial Reflection</div>
+                    <h2 class="section-title">Why These Voices Matter</h2>
+                </div>
+
+                <p>
+                    When communities are silenced, we lose more than individual stories—we lose entire ways of seeing, thinking, and making meaning. The Singh Twins' work, like Zora Neale Hurston's before them, proves that giving voice to marginalized communities isn't charity or activism alone—it's essential to understanding who we are as a society.
+                </p>
+
+                <p>
+                    Without Hurston's work, we would have lost the metaphors Black Southerners used, the stories they told, the way they made sense of their world through oral tradition. Without The Singh Twins, we wouldn't know about Princess Sophia Duleep Singh's role in the suffragette movement, or the Indian origins of denim, or the resistance of Sikh artists in British schools. These aren't footnotes to history—they are history itself, deliberately obscured by dominant narratives.
+                </p>
+
+                <div class="reflection-grid mt-lg">
+                    <div class="reflection-card">
+                        <h4>Preserving Culture</h4>
+                        <p>
+                            Both artists refuse to translate their cultures into the dominant language. Hurston preserved Black Southern dialect as literature. The Singh Twins preserved Indian miniature painting as contemporary art. Translation is erasure.
+                        </p>
+                    </div>
+                    <div class="reflection-card">
+                        <h4>Challenging Narratives</h4>
+                        <p>
+                            Both artists prove that the "official" story is incomplete. Hurston showed the complex internal lives of people white literature portrayed as simple. The Singh Twins reveal the violence and appropriation that colonial histories try to hide.
+                        </p>
+                    </div>
+                    <div class="reflection-card">
+                        <h4>Making Individuals Visible</h4>
+                        <p>
+                            Both artists reject stereotypes by showing the complexity of daily life. Hurston gave us Janie on her porch, Tea Cake in the fields. The Singh Twins included their own grandmother arriving in Britain alongside Mahatma Gandhi.
+                        </p>
+                    </div>
+                </div>
+
+                <p class="mt-lg">
+                    Every time a white author mocked Black dialect as "ignorant," it told Black Southerners their way of speaking was wrong. Every time an art professor dismissed Indian miniature painting as "backward," it told South Asian students their heritage was worthless. Both Hurston and The Singh Twins refuse that silencing. They say: our cultures are valuable, our histories are important, our voices deserve to be heard—on our own terms, in our own language.
+                </p>
+
+                <p>
+                    The work of giving voice to silenced communities is never finished. New generations need new artists to tell their stories, to insist on their humanity, to preserve their culture. But Hurston and The Singh Twins show us the path forward: by refusing to assimilate, by honoring tradition while addressing the present, and by creating art so powerful that the dominant culture can no longer ignore the voices it tried to silence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>Miniatures of Resistance</h3>
+            <p class="sans">The Singh Twins Give Voice to the British Sikh Diaspora</p>
+            <div class="footer-divider"></div>
+            <p>
+                Part of the permanent collection:<br>
+                <strong>The Legacy of Zora Neale Hurston in the American Imagination</strong>
+            </p>
+            <p class="credits sans">
+                Curated for Museum of Silenced Voices &copy; 2026<br>
+                Primary sources: The Singh Twins official archives, BBC Civilisations Stories,<br>
+                National Museums Liverpool, Museum of London Collections
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        const artifacts = document.querySelectorAll('.artifact');
+
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const artifactObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        artifacts.forEach(artifact => {
+            artifactObserver.observe(artifact);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                
+                if (target) {
+                    const navHeight = nav.offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
+    </script>
+</body>
+</html>
