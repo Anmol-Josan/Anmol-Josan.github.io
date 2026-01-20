@@ -309,6 +309,15 @@
             overflow: hidden;
         }
 
+        .artifact-image img {
+            /* Ensure the full image is visible, preserve aspect ratio */
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
         .artifact-image::before {
             content: '';
             position: absolute;
@@ -387,41 +396,47 @@
             line-height: 1.6;
         }
 
-        .video-section {
+        .audio-section {
             background: var(--white);
         }
 
-        .video-container {
+        .audio-container {
             margin-top: var(--spacing-lg);
-            background: var(--charcoal);
-            aspect-ratio: 16 / 9;
-            border-radius: 2px;
-            overflow: hidden;
+            background: var(--white);
+            border-radius: 6px;
+            padding: var(--spacing-md);
+            max-width: 100%;
             box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            gap: var(--spacing-md);
             position: relative;
         }
 
-        .video-placeholder {
-            color: var(--parchment);
+        .audio-placeholder {
+            color: var(--charcoal);
             text-align: center;
             padding: var(--spacing-md);
         }
 
-        .video-placeholder svg {
-            width: 64px;
-            height: 64px;
-            opacity: 0.5;
+        .audio-placeholder svg {
+            width: 48px;
+            height: 48px;
+            opacity: 0.8;
             margin-bottom: var(--spacing-sm);
         }
 
-        .video-context {
+        .audio-context {
             margin-top: var(--spacing-md);
             font-size: 1rem;
             color: var(--charcoal-light);
             font-style: italic;
+        }
+
+        .audio-container audio.audio-player {
+            width: 100%;
+            max-width: 900px;
         }
         
         .reflection {
@@ -588,7 +603,7 @@
             <ul>
                 <li><a href="#overview">Overview</a></li>
                 <li><a href="#gallery">Artifacts</a></li>
-                <li><a href="#interview">Interview</a></li>
+                <li><a href="#interview">Interview (Audio)</a></li>
                 <li><a href="#reflection">Reflection</a></li>
             </ul>
         </div>
@@ -620,11 +635,11 @@
                 </div>
 
                 <p class="overview-intro">
-                    Born in 1966 to Sikh immigrant parents in England, Amrit and Rabindra Kaur Singh—known collectively as The Singh Twins—faced discrimination as the only non-Catholic students in their school. When they pursued art education, their professors dismissed their work as "too traditional" and "unacceptable," insisting they abandon Indian miniature painting for Western contemporary styles.
+                    Born in 1966 to Sikh immigrant parents in England, Amrit and Rabindra Kaur Singh, known collectively as The Singh Twins, faced discrimination as the only non-Catholic students in their school. When they pursued art education, their professors dismissed their work as "too traditional" and "unacceptable," insisting they abandon Indian miniature painting for Western contemporary styles.
                 </p>
 
                 <p>
-                    They refused to assimilate. Instead, The Singh Twins created what they call "Past-Modern" art—work that honors centuries-old techniques while addressing contemporary issues of identity, colonialism, and marginalization. Their intricate paintings preserve cultural heritage while giving voice to communities that dominant narratives have tried to silence.
+                    They refused to assimilate. Instead, The Singh Twins created what they call "Past-Modern" art, work that honors centuries-old techniques while addressing contemporary issues of identity, colonialism, and marginalization. Their intricate paintings preserve cultural heritage while giving voice to communities that dominant narratives have tried to silence.
                 </p>
 
                 <div class="pullquote">
@@ -653,10 +668,7 @@
             <!-- Artifact 1 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        Cotton: Threads of Change (2018)<br>
-                        <small>Image: Princess Sophia Duleep Singh in elaborate textile composition</small>
-                    </div>
+                    <img src="Images/COTTON-Threads-of-Change_web.jpg" alt="Princess Sophia Duleep Singh in elaborate textile composition" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
@@ -673,7 +685,7 @@
                     <div class="artifact-label">
                         <h4>What It Represents</h4>
                         <p>
-                            The silenced story of a Sikh princess who fought for women's rights while her own community's history was being erased by British colonialism. Princess Sophia's story represents the intersection of Sikh, British, and feminist identity—a voice that was silenced by colonial history until The Singh Twins brought her forward.
+                            The silenced story of a Sikh princess who fought for women's rights while her own community's history was being erased by British colonialism. Princess Sophia's story represents the intersection of Sikh, British, and feminist identity, a voice that was silenced by colonial history until The Singh Twins brought her forward.
                         </p>
                     </div>
                     <div class="artifact-label">
@@ -688,10 +700,7 @@
             <!-- Artifact 2 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        Indigo: The Colour of India (2018)<br>
-                        <small>Image: Mughal Queen Mumtaz Mahal in modern blue jeans</small>
-                    </div>
+                    <img src="Images/Indigo-The-Colour-of-India.jpg" alt="Mughal Queen Mumtaz Mahal in modern blue jeans" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
@@ -702,7 +711,7 @@
                     <h3>Indigo: The Colour of India</h3>
                     <div class="artifact-description">
                         <p>
-                            This striking piece depicts Mughal Queen Mumtaz Mahal wearing modern blue jeans. The detailed portrait traces the history of indigo dye, once known as "blue gold" and used as currency to buy enslaved people. The artwork reveals how denim—considered quintessentially Western—actually originated in India, where the coarse fabric was first produced in the village of Dongri (which gave us "dungaree").
+                            This striking piece depicts Mughal Queen Mumtaz Mahal wearing modern blue jeans. The detailed portrait traces the history of indigo dye, once known as "blue gold" and used as currency to buy enslaved people. The artwork reveals how denim, considered quintessentially Western, actually originated in India, where the coarse fabric was first produced in the village of Dongri (which gave us "dungaree").
                         </p>
                     </div>
                     <div class="artifact-label">
@@ -723,10 +732,7 @@
             <!-- Artifact 3 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        Get Your Knee Off Our Necks (2020)<br>
-                        <small>Image: Political satire with Donald Trump and Statue of Liberty</small>
-                    </div>
+                    <img src="Images/Get-Your-Knee-Off-Our-Necks.jpg" alt="Political satire with Donald Trump and Statue of Liberty" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
@@ -758,10 +764,7 @@
             <!-- Artifact 4 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        EnTWINed (2006)<br>
-                        <small>Image: Reimagined scene of immigrants arriving in Britain</small>
-                    </div>
+                    <img src="Images/Entwined.png" alt="Reimagined scene of immigrants arriving in Britain" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
@@ -772,7 +775,7 @@
                     <h3>EnTWINed</h3>
                     <div class="artifact-description">
                         <p>
-                            This complex painting reimagines a historical scene of immigrants arriving in Britain, but from an Indian perspective. Based on a 19th-century painting, The Singh Twins' version includes figures from the Indian diaspora throughout British history: Mahatma Gandhi, Indian soldiers who fought in World Wars I and II, and the artists' own grandmother and father. The skyline combines buildings from London, Birmingham, Liverpool, and Bradford—all cities with significant South Asian populations.
+                            This complex painting reimagines a historical scene of immigrants arriving in Britain, but from an Indian perspective. Based on a 19th-century painting, The Singh Twins' version includes figures from the Indian diaspora throughout British history: Mahatma Gandhi, Indian soldiers who fought in World Wars I and II, and the artists' own grandmother and father. The skyline combines buildings from London, Birmingham, Liverpool, and Bradford, all cities with significant South Asian populations.
                         </p>
                     </div>
                     <div class="artifact-label">
@@ -793,10 +796,7 @@
             <!-- Artifact 5 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        Casualty of War (2000)<br>
-                        <small>Image: Portrait of Maharaja Duleep Singh in exile</small>
-                    </div>
+                    <img src="Images/Casualty.jpg" alt="Portrait of Maharaja Duleep Singh in exile" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
@@ -813,7 +813,7 @@
                     <div class="artifact-label">
                         <h4>What It Represents</h4>
                         <p>
-                            The violence of colonialism against Sikh sovereignty and the silencing of Sikh royal history and cultural identity. Duleep Singh's story represents the personal cost of empire—a child king stripped of his heritage and forced to live as a curiosity in the court of his conquerors.
+                            The violence of colonialism against Sikh sovereignty and the silencing of Sikh royal history and cultural identity. Duleep Singh's story represents the personal cost of empire, a child king stripped of his heritage and forced to live as a curiosity in the court of his conquerors.
                         </p>
                     </div>
                     <div class="artifact-label">
@@ -828,16 +828,13 @@
             <!-- Artifact 6 -->
             <article class="artifact">
                 <div class="artifact-image">
-                    <div class="artifact-placeholder">
-                        BBC Civilisations Stories (2020)<br>
-                        <small>Video: The Singh Twins discuss their artistic identity and resistance</small>
-                    </div>
+                    <img src="Images/BBC-Interview-Thumb.jpg" alt="BBC The Interview: The Singh Twins thumbnail" loading="lazy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;">
                 </div>
                 <div class="artifact-content">
                     <div class="artifact-meta">
-                        <span>2020</span>
-                        <span>Video interview excerpt</span>
-                        <span>BBC Documentary</span>
+                        <span>2022</span>
+                        <span>Audio interview excerpt</span>
+                        <span>BBC World Service</span>
                     </div>
                     <h3>In Their Own Words: The Singh Twins Speak</h3>
                     <div class="artifact-description">
@@ -862,34 +859,38 @@
         </div>
     </section>
 
-    <!-- Interview/Video Section -->
-    <section class="video-section" id="interview">
+    <!-- Interview/Audio Section -->
+    <section class="audio-section" id="interview">
         <div class="container">
             <div class="content">
                 <div class="section-header">
-                    <div class="section-label">Featured Interview</div>
+                    <div class="section-label">Featured Interview (Audio)</div>
                     <h2 class="section-title">Voices of Resistance: The Artists Speak</h2>
                 </div>
 
                 <p>
-                    In this BBC Civilisations Stories documentary excerpt, The Singh Twins discuss their artistic philosophy, the discrimination they faced in British art schools, and why they choose to work collaboratively rather than as individual artists. Their conversation reveals how personal experiences of marginalization inform their artistic mission to give voice to silenced communities.
+                    In this BBC World Service "The Interview" audio excerpt, Zeinab Badawi speaks to The Singh Twins about their artistic philosophy, the discrimination they faced in British art schools, and why they choose to work collaboratively rather than as individual artists. Their conversation reveals how personal experiences of marginalization inform their artistic mission to give voice to silenced communities.
                 </p>
 
-                <div class="video-container">
-                    <div class="video-placeholder">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
+                <div class="audio-container">
+                    <div class="audio-placeholder">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3 10v4h4l5 4V6L7 10H3z"/>
                         </svg>
-                        <p class="sans"><strong>BBC Civilisations Stories: The Singh Twins</strong></p>
+                        <p class="sans"><strong>The Interview: The Singh Twins Mixing Art and Politics</strong></p>
                         <p class="sans" style="font-size: 0.875rem; margin-top: 0.5rem;">
-                            Video embed placeholder<br>
-                            (Insert BBC interview link or iframe here)
+                            Audio (23:43). <a href="https://www.bbc.co.uk/sounds/play/w3ct32r6" target="_blank" rel="noopener">Listen on BBC Sounds</a>
                         </p>
                     </div>
+
+                    <audio controls preload="none" class="audio-player" aria-label="BBC The Interview: The Singh Twins (audio)">
+                        <source src="https://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/https/vpid/p0cqn2j3.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element. <a href="https://www.bbc.co.uk/sounds/play/w3ct32r6" target="_blank" rel="noopener">Listen on BBC Sounds</a>.
+                    </audio>
                 </div>
 
-                <p class="video-context">
-                    "We were told that Indian miniature painting had no place in contemporary British art. But we knew that our cultural heritage wasn't something to be ashamed of—it was our greatest strength. By staying true to our traditions, we could tell stories that Western art had ignored for centuries."
+                <p class="audio-context">
+                    "We were told that Indian miniature painting had no place in contemporary British art. But we knew that our cultural heritage wasn't something to be ashamed of. It was our greatest strength. By staying true to our traditions, we could tell stories that Western art had ignored for centuries."
                 </p>
             </div>
         </div>
@@ -905,11 +906,10 @@
                 </div>
 
                 <p>
-                    When communities are silenced, we lose more than individual stories—we lose entire ways of seeing, thinking, and making meaning. The Singh Twins' work, like Zora Neale Hurston's before them, proves that giving voice to marginalized communities isn't charity or activism alone—it's essential to understanding who we are as a society.
-                </p>
+                    When communities are silenced, we lose more than individual stories. We lose entire ways of seeing, thinking, and making meaning. The Singh Twins' work, like Zora Neale Hurston's before them, proves that giving voice to marginalized communities isn't charity or activism alone. It's essential to understanding who we are as a society.
 
                 <p>
-                    Without Hurston's work, we would have lost the metaphors Black Southerners used, the stories they told, the way they made sense of their world through oral tradition. Without The Singh Twins, we wouldn't know about Princess Sophia Duleep Singh's role in the suffragette movement, or the Indian origins of denim, or the resistance of Sikh artists in British schools. These aren't footnotes to history—they are history itself, deliberately obscured by dominant narratives.
+                    Without Hurston's work, we would have lost the metaphors Black Southerners used, the stories they told, the way they made sense of their world through oral tradition. Without The Singh Twins, we wouldn't know about Princess Sophia Duleep Singh's role in the suffragette movement, or the Indian origins of denim, or the resistance of Sikh artists in British schools. These aren't footnotes to history. They are history itself, deliberately obscured by dominant narratives.
                 </p>
 
                 <div class="reflection-grid mt-lg">
@@ -934,7 +934,7 @@
                 </div>
 
                 <p class="mt-lg">
-                    Every time a white author mocked Black dialect as "ignorant," it told Black Southerners their way of speaking was wrong. Every time an art professor dismissed Indian miniature painting as "backward," it told South Asian students their heritage was worthless. Both Hurston and The Singh Twins refuse that silencing. They say: our cultures are valuable, our histories are important, our voices deserve to be heard—on our own terms, in our own language.
+                    Every time a white author mocked Black dialect as "ignorant," it told Black Southerners their way of speaking was wrong. Every time an art professor dismissed Indian miniature painting as "backward," it told South Asian students their heritage was worthless. Both Hurston and The Singh Twins refuse that silencing. They say: our cultures are valuable, our histories are important, our voices deserve to be heard on our own terms, in our own language.
                 </p>
 
                 <p>
@@ -951,13 +951,13 @@
             <p class="sans">The Singh Twins Give Voice to the British Sikh Diaspora</p>
             <div class="footer-divider"></div>
             <p>
-                Part of the permanent collection:<br>
-                <strong>The Legacy of Zora Neale Hurston in the American Imagination</strong>
+                Created by Anmol Singh Josan<br>
+                Museum of Silenced Voices
             </p>
             <p class="credits sans">
-                Curated for Museum of Silenced Voices &copy; 2026<br>
-                Primary sources: The Singh Twins official archives, BBC Civilisations Stories,<br>
-                National Museums Liverpool, Museum of London Collections
+                Primary sources: The Singh Twins official archives, BBC The Interview (BBC World Service), Museum of London<br>
+                Design and development by Anmol Singh Josan<br>
+                All rights reserved.
             </p>
         </div>
     </footer>
