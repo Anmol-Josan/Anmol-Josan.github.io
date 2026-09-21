@@ -1,17 +1,13 @@
-import path from "node:path";
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   output: "export",
   trailingSlash: true,
   images: {
     unoptimized: true
   },
-  outputFileTracingRoot: path.join(process.cwd()),
-  experimental: {
-    optimizePackageImports: ["lucide-react"]
-  }
+  outputFileTracingRoot: process.cwd()
 };
 
 export default nextConfig;
