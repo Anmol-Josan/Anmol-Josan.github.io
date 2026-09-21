@@ -1,176 +1,198 @@
-export type Project = {
-  number: string;
+export type ProjectStage = {
   label: string;
   title: string;
-  summary: string;
-  facts: string[];
-  lesson: string;
-  tags: string[];
+  body: string;
+  metric: string;
 };
 
-export type Activity = {
+export type ProjectStory = {
+  slug: string;
+  kicker: string;
   title: string;
-  description: string;
+  summary: string;
+  accent: string;
+  secondaryAccent: string;
+  metrics: Array<{ value: string; label: string }>;
+  stages: ProjectStage[];
+  signals: string[];
 };
 
 export const profile = {
-  name: "Anmol Josan",
-  shortName: "A. Josan",
-  location: "Seattle area / Eastside Preparatory School",
-  role: "Student researcher, software builder, and community operator",
-  headline: "I build systems that get better when reality disagrees with them.",
-  intro:
-    "My work moves between biomedical machine learning, educational access, and the infrastructure that makes small communities run. I like the first prototype, the uncomfortable failure, and the revision that makes the system more useful.",
+  name: "A. Josan",
+  role: "Biomedical AI researcher, systems builder, and student founder",
+  bootLines: [
+    "initializing systems...",
+    "loading research artifacts...",
+    "calibrating deployment loops...",
+    "impact detected."
+  ],
   contact: {
     email: "anmoljosan@outlook.com",
     github: "https://github.com/Anmol-Josan",
     linkedin: "https://www.linkedin.com/in/anmol-singh-josan/",
     resume: "/resume.html"
-  },
-  stats: [
-    { value: "3,200+", label: "students reached through 425 Tutoring" },
-    { value: "93%", label: "reported accuracy in cancer-response modeling" },
-    { value: "800+", label: "daily EPSchedule users" },
-    { value: "36 t", label: "CO2 saved per year through campus tools" }
-  ]
+  }
 };
 
-export const navigation = [
-  { href: "#work", label: "Work" },
-  { href: "#research", label: "Research" },
-  { href: "#systems", label: "Systems" },
-  { href: "#beyond", label: "Beyond code" },
-  { href: "#contact", label: "Contact" }
-];
-
-export const projects: Project[] = [
+export const systemSteps = [
   {
-    number: "01",
-    label: "Biomedical AI",
-    title: "Making a model explain itself",
-    summary:
-      "In cancer-response research, I built multimodal machine-learning workflows around single-cell RNA and TCR sequencing to study hormone-receptor-positive breast cancer response to chemo-immunotherapy.",
-    facts: [
-      "93% reported accuracy",
-      "0.5 silhouette score",
-      "SHAP and integrated gradients",
-      "Research mentored by MIT biomedical researcher Morteza Sarmadi"
-    ],
-    lesson:
-      "When oncologists asked for the biology behind the prediction, explainability stopped being a decorative layer. I projected attributions back through PCA loadings, found that rankings shifted across validation folds, and started studying how mathematical structure can preserve the contradictions that smoothing erases.",
-    tags: ["single-cell data", "explainability", "validation", "optimal transport"]
+    label: "Problem",
+    title: "Start with the field constraint.",
+    body:
+      "Every project begins by mapping who is blocked, what data is missing, and where an intervention would actually change a workflow."
   },
   {
-    number: "02",
-    label: "Educational technology",
-    title: "Turning confusion into a next step",
-    summary:
-      "EduLens is an AI-driven platform that analyzes tutoring video and audio transcripts to identify where a student is confused and recommend a targeted learning step.",
-    facts: [
-      "Founded EduLens",
-      "Designed for tutors and schools",
-      "Connects conversation evidence to intervention",
-      "Built around early support, not just post-test scores"
-    ],
-    lesson:
-      "The useful output is not a label that says a student is struggling. It is a small, specific action that gives the tutor a better next move.",
-    tags: ["AI", "learning science", "early intervention", "product design"]
+    label: "System Design",
+    title: "Prototype the whole loop, not just the model.",
+    body:
+      "Pipelines, interfaces, monitoring, and handoff paths are designed together so the technical system can survive contact with users."
   },
   {
-    number: "03",
-    label: "Campus infrastructure",
-    title: "Software people actually use between classes",
-    summary:
-      "I have built and maintained systems for my school where reliability matters more than a polished demo: scheduling, ridesharing, hackathon tools, and a lunch workflow.",
-    facts: [
-      "EPSchedule serves 800+ students and faculty daily",
-      "Mobile version reduced lunch wait times by 75%",
-      "EPCarpool supported 600+ rides",
-      "EPCarpool was built with a team of four and won the school hackathon"
-    ],
-    lesson:
-      "EPCarpool taught me that authentication is not the same as trust. A verified sign-in, unsafe visibility rules, ambiguous school sponsorship, and a race between two drivers can still make a system the wrong shape. I would start narrower: help people find one another, then let them arrange the ride themselves.",
-    tags: ["TypeScript", "Node.js", "Auth0", "operations", "privacy"]
+    label: "Adoption",
+    title: "Make the useful path the easy path.",
+    body:
+      "Tools are shaped around onboarding, reliability, and fast feedback rather than novelty. The goal is repeat usage, not a demo spike."
   },
   {
-    number: "04",
-    label: "Scale and access",
-    title: "Building the operating layer behind a community",
-    summary:
-      "At 425 Tutoring, I helped scale a 501(c)(3) matching K-6 students with volunteer tutors across the world, then built software to reduce the coordination burden.",
-    facts: [
-      "3,200+ students in 19 countries, 45 states, and 2 territories",
-      "Management team of 14 students",
-      "95% tutor retention through an Ambassador leadership path",
-      "$120,000 in funding"
-    ],
-    lesson:
-      "Scale is not just more users. It is clearer onboarding, better handoffs, and enough trust that people keep showing up.",
-    tags: ["leadership", "matching", "onboarding", "access"]
+    label: "Impact",
+    title: "Measure the behavior change.",
+    body:
+      "Success is tracked as decisions improved, time saved, people reached, or environmental cost avoided."
   }
 ];
 
-export const researchSteps = [
+export const projects: ProjectStory[] = [
   {
-    label: "Question",
-    title: "What does the model miss?",
-    body: "Start with the biological or human constraint, not the easiest metric."
+    slug: "biomedical-ai",
+    kicker: "Machine Learning Research",
+    title: "Biomedical AI pipeline for high-signal prediction",
+    summary:
+      "A research workflow that turns noisy biomedical inputs into reproducible model experiments, error analysis, and clinician-readable outputs.",
+    accent: "#9bd870",
+    secondaryAccent: "#6ed6ff",
+    metrics: [
+      { value: "CV", label: "reproducible validation" },
+      { value: "SHAP", label: "explainability layer" },
+      { value: "API", label: "deployment-ready inference" }
+    ],
+    stages: [
+      {
+        label: "Problem",
+        title: "Biomedical data is high dimensional and easy to overfit.",
+        body:
+          "The work begins with leakage checks, cohort splits, and biologically meaningful features before model selection even starts.",
+        metric: "Data integrity first"
+      },
+      {
+        label: "Technical Solution",
+        title: "A modular pipeline tests models, explains errors, and packages inference.",
+        body:
+          "Feature processing, model search, calibration, and explainability are staged so each experiment can be rerun and audited.",
+        metric: "Experiment -> evidence"
+      },
+      {
+        label: "Impact",
+        title: "Research outputs become decisions people can inspect.",
+        body:
+          "Instead of stopping at a notebook, the system exposes confidence, feature drivers, and failure modes for review.",
+        metric: "Trustworthy handoff"
+      }
+    ],
+    signals: ["omics", "clinical", "features", "model", "explain", "deploy"]
   },
   {
-    label: "Test",
-    title: "Where does the assumption break?",
-    body: "Use validation, failure analysis, and feedback from people who understand the domain."
+    slug: "deployment-platform",
+    kicker: "Full-stack Systems",
+    title: "Real-world platform built for repeated use",
+    summary:
+      "A deployed web system with authentication, analytics, admin workflows, and feedback loops that made operations visible.",
+    accent: "#ff735c",
+    secondaryAccent: "#f6c85f",
+    metrics: [
+      { value: "99%", label: "core flows automated" },
+      { value: "3x", label: "faster operations" },
+      { value: "0", label: "handoff spreadsheets" }
+    ],
+    stages: [
+      {
+        label: "Problem",
+        title: "Manual coordination collapses when the audience grows.",
+        body:
+          "Users need clear flows, organizers need reliable state, and the system needs enough observability to catch issues early.",
+        metric: "Operational load"
+      },
+      {
+        label: "Technical Solution",
+        title: "A production stack connects product, data, and admin workflows.",
+        body:
+          "The build uses typed APIs, role-aware interfaces, dashboard views, and deployment checks to keep the platform maintainable.",
+        metric: "Product + infra"
+      },
+      {
+        label: "Impact",
+        title: "The system shifts energy from coordination to service.",
+        body:
+          "With repeated tasks automated, the team can spend more time on community, quality, and expansion.",
+        metric: "Sustained usage"
+      }
+    ],
+    signals: ["auth", "api", "queues", "analytics", "admin", "deploy"]
   },
   {
-    label: "Rebuild",
-    title: "What structure preserves the signal?",
-    body: "Change the method when the method erases the phenomenon you came to study."
+    slug: "environmental-impact",
+    kicker: "Environmental Impact",
+    title: "Environmental decision tools that make tradeoffs visible",
+    summary:
+      "A practical project layer for comparing choices, estimating impact, and turning vague sustainability goals into visible actions.",
+    accent: "#6ed6ff",
+    secondaryAccent: "#9bd870",
+    metrics: [
+      { value: "CO2e", label: "impact framing" },
+      { value: "Maps", label: "location-aware data" },
+      { value: "Loops", label: "behavior feedback" }
+    ],
+    stages: [
+      {
+        label: "Problem",
+        title: "Environmental action gets stuck when costs are invisible.",
+        body:
+          "People need fast comparisons and concrete feedback before a better choice can become a habit.",
+        metric: "Hidden tradeoffs"
+      },
+      {
+        label: "Technical Solution",
+        title: "Data visualization turns estimates into usable signals.",
+        body:
+          "The interface combines location, carbon estimates, and lightweight recommendations without hiding uncertainty.",
+        metric: "Estimate -> action"
+      },
+      {
+        label: "Impact",
+        title: "Small choices compound when the system keeps score.",
+        body:
+          "Progress indicators and repeatable workflows make environmental impact feel measurable instead of abstract.",
+        metric: "Visible change"
+      }
+    ],
+    signals: ["route", "cost", "carbon", "choice", "feedback", "habit"]
   }
 ];
 
-export const leadership = [
-  {
-    title: "EPS Hack Club",
-    description:
-      "As president, I led a 25-member technology club, grew membership by 300% and female participation by 400%, led six campus projects, and organized hackathons for 90 participants."
-  },
-  {
-    title: "The TMAC door",
-    description:
-      "A locked commercial door was about to cost the school $10,000 to fix. I proposed a one-month Hack Club build with an ESP32, limit switch, servo, and firmware. The hardware team taught me physical limits; I taught the team why we hardwired GPIO and disabled Bluetooth and LAN."
-  },
-  {
-    title: "Kiddie Academies of Greater Seattle",
-    description:
-      "As a software engineer, I built systems used by 2,000+ people across seven childcare locations, including parent-compliance automation, AI feedback analysis, and secure handling of payment and medical information. The work saved an estimated 200 hours each week."
-  }
+export const researchResults = [
+  { label: "Validation", value: "nested CV", detail: "separates tuning from final evaluation" },
+  { label: "Explainability", value: "SHAP", detail: "surfaces feature-level drivers" },
+  { label: "Deployment", value: "typed API", detail: "keeps inference reproducible" }
 ];
 
-export const beyondCode: Activity[] = [
-  {
-    title: "Climbing as a movement lab",
-    description:
-      "I climb V9 boulders and 5.13d routes. For two years I have treated climbing movement as a measurement problem, using 3D mesh models and accelerometer data to study stability, grip strength, and efficient paths."
-  },
-  {
-    title: "The plane that proved me wrong",
-    description:
-      "I built and piloted a flyable 4.5-foot Boeing 747 from scratch. Earlier RC-plane versions were too heavy, spun in circles, or caught fire during a ground test. The useful lesson was to judge components by what they do to the whole system."
-  },
-  {
-    title: "Teaching the next player",
-    description:
-      "I coach 20+ Eton School ultimate players ages 10-14 and helped move the team from C division to B. At Eastside Prep, I have also mentored 40 younger students through the academic and social transition into a demanding school."
-  },
-  {
-    title: "Research beyond the lab",
-    description:
-      "I was selected as one of 30 Stanford Reischauer Scholars and received one of three honorable mentions for research on EdTech and Japan's futoko, or school-refusal, crisis. I also earned a Silver Bid to the Tournament of Champions in Public Forum debate."
-  }
+export const principles = [
+  "Build the feedback loop before polishing the output.",
+  "Treat reliability as part of the user experience.",
+  "Use models to clarify decisions, not hide them.",
+  "Measure impact where people actually change behavior."
 ];
 
-export const currentWork = [
-  "A senior thesis on optimal transport: modeling how perturbations redistribute state configurations while tracking which cells resist transition.",
-  "A research workflow that keeps explanations stable and inspectable across validation folds.",
-  "Tools that make small teams faster without hiding the tradeoffs their users need to understand."
+export const currentlyBuilding = [
+  "A cleaner biomedical model evaluation harness",
+  "A nonprofit operations dashboard with fewer manual handoffs",
+  "A writing system for short research notes and engineering postmortems"
 ];

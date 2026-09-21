@@ -1,8 +1,7 @@
-# Anmol Josan Personal Website
+# Scroll-Driven Personal Website
 
-Fast, static portfolio built with Next.js App Router and TypeScript. The page
-uses semantic HTML, CSS, and native disclosure controls instead of scroll
-scrubbing, timers, cursor effects, or client-side loading states.
+High-end scrollytelling portfolio built with Next.js App Router, TypeScript,
+Tailwind CSS, GSAP ScrollTrigger, and Lenis.
 
 ## Run Locally
 
@@ -26,11 +25,11 @@ Most portfolio content lives in `data/profile.ts`.
 
 - Update name, contact links, and resume path in `profile`.
 - Replace `public/resume.html` with the final resume asset.
-- Edit project stories, research steps, leadership, activities, and current work in the exported arrays.
+- Edit project stories, metrics, principles, and current work in the exported arrays.
 
-## Performance Notes
+## Animation Notes
 
-- The home page is rendered as a server component with no client-side JavaScript.
-- CSS uses static backgrounds and restrained transitions rather than continuous animation.
-- Project notes use native `<details>` elements, so they remain accessible without a UI library.
-- `prefers-reduced-motion` is respected by disabling the remaining transitions and smooth scrolling.
+- Scroll-linked animation logic is scoped inside section components with `useGsapScope`.
+- `ScrollTrigger` handles pinning and scrubbed timelines.
+- `SmoothScrollProvider` wires Lenis into GSAP's ticker.
+- `prefers-reduced-motion` is respected by disabling GSAP setup and showing static content.
