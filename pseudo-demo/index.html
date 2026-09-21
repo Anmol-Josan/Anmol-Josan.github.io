@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol Josan | Pseudo-Demo</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Web 2!</h1>
+        <h4>Today, we will mess with some pseudo classes and elements.</h4>
+        
+        <h2>First, lets dive into CSS</h2>
+
+        <p>If we think of CSS in terms of selectors, properties, and values, then a typical CSS entry would look like this:</p>
+        <pre>
+    <code>selector {property: value;}</code>
+        </pre>
+        <p>To style the above, we need to add two tags together. We call this CSS Combinators</p>
+
+        <h2>What are Pseudo Classes?</h2>
+        <p>Again, if we think of CSS in terms of selectors, properties, and values, then pseudo class is an add-on to a selector.</p>
+        <p>A typical CSS entry calling on Psuedo Class would look like this:</p>
+        <pre>
+    <code>selector:pseudo_class {property: value;}</code>
+        </pre>
+        <h4>We use Pseudo Class for Links</h4>
+        <p>If we want our <a href="http://">link</a> to look different, we can simply add it in my CSS as follows:</p>
+        <pre>
+    <code>a {color: red;}</code>
+        </pre>
+        <p>If we want our <a href="#">link states</a> to look different then we will use a psuedo class like:</p>
+        <ul>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+        </ul>
+        <p>But we can also make a <a class="special" href="#">new link</a> look different.</p>
+        <h4>We can even call on specific selectors depending on their hierarchy.</h4>
+        <div id="first">
+            <p>This Text Will Change.</p>
+            <p>This will look different.</p>
+        </div>
+
+        <h2>What are Pseudo Elements?</h2>
+        <p id="pseudo-elements"> Again, if we think of pseudo classes as add-ons, then we think of pseudo elements as creating new elemets from a selector.</p>
+        <h2>This is a form with some focus elements.</h2>
+        <form>
+            <input type="input" id="focus-input">
+        </br>
+            <input type="checkbox" class="box"> Checkbox 1
+        </br>
+            <input type="checkbox" class="box"> Checkbox 2
+        </br>
+            <input type="checkbox" class="box"> Checkbox 3
+        </form>
+    </div>
+</body>
+</html>

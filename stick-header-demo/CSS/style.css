@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(188, 235, 255);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.header {
+    background: rgb(74, 151, 227);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav {
+    height: 130px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: -70px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.nav-inner {
+    float: left;
+    width: 100%;
+    position: sticky;
+    top: 50px;
+}
+
+.logo {
+    top: 0;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+    position: sticky;
+}
+
+nav {
+    margin-top: 60px;
+    height: 60px;
+    left: 0;
+    transition: all 300ms ease;
+}
+
+nav a {
+    display:ruby;
+    left: 0;
+    margin-top: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    transition: all 300ms ease;
+}
+
+.l {
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(0);
+        margin-left: 74%;
+    }
+
+    100% {
+        transform: translateX(0);
+        margin-left: 0%;
+    }
+}
+
+.r {
+    animation-name: slideOutLeft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        margin-left: 0%;
+    }
+
+    100% {
+        transform: translateX(0);
+        margin-left: 74%;
+    }
+}
+
+nav a:hover {
+    background-color: gray;
+}
+
+@media screen and (max-width: 580px) {
+    .nav {
+        padding: 20px 10px !important;
+    }
+
+    .nav a {
+        float: none;
+        text-align: left;
+    }
+
+    nav {
+        float: none;
+    }
+}
+
+.left {
+    float: left;
+    width: 20%;
+}
+
+.left .side-nav a {
+    background: rgb(74, 151, 227);
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.left .side-nav a:hover {
+    background-color: rgb(94, 94, 94);
+}
+
+.left .side-nav a:active {
+    background: rgb(0, 128, 255);
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+
+.right {
+    margin-top: 10px;
+    float: left;
+    width: 20%;
+    background: rgb(74, 151, 227);
+    color: white;
+    padding: 15px;
+}
+
+.footer {
+    background: rgb(0, 81, 161);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    clear: both;
+}
+
+footer {
+    width: 60%;
+    margin: auto;
+}
+
+@media (min-width:621px) and (max-width:1000px) {
+    .main {
+        width: 60%;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    @keyframes slideOutLeft {
+        0% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+
+        100% {
+            transform: translateX(0);
+            margin-left: 60%;
+        }
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(0);
+            margin-left: 60%;
+        }
+
+        100% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .left,
+    .main,
+    .right {
+        width: 100%;
+    }
+
+    .nav-inner{
+        align-items: center;
+        top:0;
+        width:100%;
+        margin-top: 0;
+    }
+
+    nav{
+        align-items: center;
+        margin-top:60px;
+        margin-left:none;
+        margin-right:none;
+        width: 100%;
+    }
+
+    nav a{
+        width: 20%;
+        margin: 0;
+    }
+
+    @keyframes slideOutLeft {
+        0% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+
+        100% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+    }
+
+    @keyframes slideInLeft {
+        0% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+
+        100% {
+            transform: translateX(0);
+            margin-left: 0%;
+        }
+    }
+}
