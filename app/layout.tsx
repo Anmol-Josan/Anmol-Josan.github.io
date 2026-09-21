@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anmol-josan.github.io"),
-  title: "Anmol Josan | Research, software, and systems",
+  title: "Anmol Josan | Systems under load",
   description:
     "Anmol Josan is a student researcher and software builder working across biomedical AI, educational access, and community infrastructure.",
   openGraph: {
-    title: "Anmol Josan | Research, software, and systems",
+    title: "Anmol Josan | Systems under load",
     description:
       "Biomedical AI, educational access, and reliable systems for real people.",
     url: "https://anmol-josan.github.io",

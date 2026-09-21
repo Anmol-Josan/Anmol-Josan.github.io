@@ -54,6 +54,7 @@ export const projects: Project[] = [
       "93% reported accuracy",
       "0.5 silhouette score",
       "SHAP and integrated gradients",
+      "First in computational biology at the Washington State Science Fair",
       "Research mentored by MIT biomedical researcher Morteza Sarmadi"
     ],
     lesson:
@@ -165,7 +166,7 @@ export const beyondCode: Activity[] = [
   {
     title: "Research beyond the lab",
     description:
-      "I was selected as one of 30 Stanford Reischauer Scholars and received one of three honorable mentions for research on EdTech and Japan's futoko, or school-refusal, crisis. I also earned a Silver Bid to the Tournament of Champions in Public Forum debate."
+      "I was selected as one of 30 Stanford Reischauer Scholars and received one of three honorable mentions for research on EdTech and Japan's futoko, or school-refusal, crisis. I also reached USACO Platinum and the top 0.3% of Project Euler, then earned a Silver Bid to the Tournament of Champions in Public Forum debate."
   }
 ];
 
