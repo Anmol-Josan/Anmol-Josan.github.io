@@ -1,0 +1,102 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7a0000;
+}
+
+body {
+    color: rgb(255, 255, 255);
+    background-color: #992222;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #c10000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.aboutMain {
+    width: 100%;
+    background-color: rgb(255, 85, 85);
+    margin-top: 1%;
+    padding: 2%;
+}
+
+.header {
+    margin-top: 10px;
+    background: rgb(255, 85, 85);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.left {
+    margin-top: 10px;
+    float: left;
+    width: 20%;
+    background: rgb(255, 85, 85);
+    color: white;
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+
+.right {
+    margin-top: 10px;
+    float: left;
+    width: 20%;
+    background: rgb(255, 85, 85);
+    color: white;
+    padding: 15px;
+}
+
+@media (min-width:621px) and (max-width:1000px) {
+    .left {
+        width: 40%;
+    }
+
+    .main {
+        width: 50%;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+
+    .left,
+    .main,
+    .right {
+        width: 100%;
+    }
+}
